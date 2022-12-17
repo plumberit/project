@@ -1,15 +1,23 @@
 package com.shapovalov.project.app;
 
+import com.shapovalov.project.app.layers.InitializeLayer;
+import com.shapovalov.project.app.layers.ProcessLayer;
+
 public class App {
 
-    AppLayerHandler appLayerHandler = new AppLayerHandler();
-
     public void run() {
-        //состояние слоев нужно обновлять постоянно
 
-        while (true) {
-           AppCycleProcess appCycleProcess = new AppCycleProcess();
-           appCycleProcess.run();
+        InitializeLayer initializeLayer = new InitializeLayer();
+        initializeLayer.run();
+        ProcessLayer processLayer = new ProcessLayer();
+        processLayer.run();
+
+
+           while (true) {
+               AppCycleProcess appCycleProcess = new AppCycleProcess();
+               appCycleProcess.run();
+           }
+
+
         }
-    }
 }

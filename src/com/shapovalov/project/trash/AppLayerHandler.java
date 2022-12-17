@@ -1,4 +1,4 @@
-package com.shapovalov.project.app;
+package com.shapovalov.project.trash;
 
 import java.util.ArrayList;
 
@@ -20,7 +20,7 @@ public class AppLayerHandler {
         layerOrder.add(AppLayer.PROCESS_LAYER);
     }
 
-    public AppLayer updateAppLayer(/*должен принимать команды пользователя*/) {
+    public void updateAppLayer(/*должен принимать команды пользователя*/) {
         //продумать логику обновления
 
         for (int i = 0; i < layerOrder.size(); i++) {
@@ -29,6 +29,9 @@ public class AppLayerHandler {
                 break;
             }
         }
+    }
+
+    public AppLayer getAppLayer() {
         return appLayer;
     }
 }
