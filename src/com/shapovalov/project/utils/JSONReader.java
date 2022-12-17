@@ -9,9 +9,9 @@ import java.util.Scanner;
 
 public class JSONReader {
 
-    public void init() {
+    public JSONObject init() {
         String JSONFileText = JSONFileReader();
-        JSONObject JSONObject = JSONObjectCreator(JSONFileText);
+        return JSONObjectCreator(JSONFileText);
     }
 
     private static String JSONFileReader() {
