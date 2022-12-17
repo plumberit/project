@@ -7,5 +7,4 @@ import java.util.ArrayList;
 public class Countries {
     private static ArrayList<Country> countries =
             new ArrayList<>();
-
 }

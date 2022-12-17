@@ -6,4 +6,8 @@ public class Country {
     private long population;
     private int square;
     private long UDP;
+
+    public void setId(int id) {
+        this.id = id;
+    }
 }
