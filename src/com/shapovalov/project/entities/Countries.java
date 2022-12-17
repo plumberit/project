@@ -5,6 +5,6 @@ import com.shapovalov.project.entities.model.Country;
 import java.util.ArrayList;
 
 public class Countries {
-    private static ArrayList<Country> countries =
+    public static ArrayList<Country> countries =
             new ArrayList<>();
 }
