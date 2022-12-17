@@ -8,9 +8,13 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 public class JSONCountriesInitializer {
+
     //временная копия
     ArrayList<Country> countries = new ArrayList<>();
-    initializeList(JSONObject);
+
+    JSONCountriesInitializer(JSONObject JSONObject) {
+        initializeList(JSONObject);
+    }
 
     void initializeList(JSONObject obj) {
         JSONArray arr = (JSONArray) obj.get("countries 2020");
