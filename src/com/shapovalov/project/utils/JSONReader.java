@@ -1,6 +1,8 @@
 package com.shapovalov.project.utils;
 
 import com.shapovalov.project.entities.model.Country;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
 
 import java.io.FileReader;
 import java.io.IOException;
@@ -25,5 +27,16 @@ public class JSONReader {
             e.printStackTrace();
         }
         return str.toString();
+    }
+
+    private static JSONObject JSONCreator(String str) {
+        JSONParser parser = new JSONParser();
+        JSONObject obj = null;
+        try {
+            obj = (JSONObject) parser.parse(str);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return obj;
     }
 }
