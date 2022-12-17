@@ -4,14 +4,14 @@ import java.util.ArrayList;
 
 public class AppLayerHandler {
 
-    enum AppLayer {
+    private enum AppLayer {
         START_LAYER,
         PROCESS_LAYER;
     }
 
-    ArrayList<AppLayer> layerOrder = new ArrayList<>();
+    private ArrayList<AppLayer> layerOrder = new ArrayList<>();
 
-    AppLayer appLayer;
+    private AppLayer appLayer;
 
     AppLayerHandler() {
         appLayer = AppLayer.START_LAYER;
@@ -20,7 +20,7 @@ public class AppLayerHandler {
         layerOrder.add(AppLayer.PROCESS_LAYER);
     }
 
-    void update() {
+    private void update() {
         for (int i = 0; i < layerOrder.size(); i++) {
             if(layerOrder.get(i)==appLayer) {
                 appLayer = layerOrder.get(i + 1);
