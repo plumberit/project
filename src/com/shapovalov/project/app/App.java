@@ -11,13 +11,5 @@ public class App {
         initializeLayer.run();
         ProcessLayer processLayer = new ProcessLayer();
         processLayer.run();
-
-
-           while (true) {
-               AppCycleProcess appCycleProcess = new AppCycleProcess();
-               appCycleProcess.run();
-           }
-
-
         }
 }
