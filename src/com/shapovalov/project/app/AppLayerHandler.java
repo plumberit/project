@@ -20,7 +20,9 @@ public class AppLayerHandler {
         layerOrder.add(AppLayer.PROCESS_LAYER);
     }
 
-    public AppLayer updateAppLayer() {
+    public AppLayer updateAppLayer(/*должен принимать команды пользователя*/) {
+        //продумать логику обновления
+
         for (int i = 0; i < layerOrder.size(); i++) {
             if(layerOrder.get(i)==appLayer) {
                 appLayer = layerOrder.get(i + 1);
