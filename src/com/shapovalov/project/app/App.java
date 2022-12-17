@@ -5,6 +5,6 @@ public class App {
     AppLayerHandler appLayerHandler = new AppLayerHandler();
 
     public void run() {
-        appLayerHandler.getAppLayer();
+
     }
 }

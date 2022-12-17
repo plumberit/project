@@ -1,23 +1,32 @@
 package com.shapovalov.project.app;
 
-public class AppLayerHandler {
+import java.util.ArrayList;
 
-    boolean firstCall = false;
+public class AppLayerHandler {
 
     enum AppLayer {
         START_LAYER,
         PROCESS_LAYER;
     }
 
-    AppLayer appLayer = AppLayer.START_LAYER;
+    ArrayList<AppLayer> layerOrder = new ArrayList<>();
 
-    AppLayer appLayerSwitcher() {
-        if (!firstCall) {
+    AppLayer appLayer;
 
-        }
+    AppLayerHandler() {
+        appLayer = AppLayer.START_LAYER;
+
+        layerOrder.add(AppLayer.START_LAYER);
+        layerOrder.add(AppLayer.PROCESS_LAYER);
     }
 
-    AppLayer getAppLayer() {
-        return appLayer;
+    void update() {
+        for (int i = 0; i < layerOrder.size(); i++) {
+            if(layerOrder.get(i)==appLayer) {
+                appLayer = layerOrder.get(i + 1);
+                break;
+            }
+        }
+
     }
 }
