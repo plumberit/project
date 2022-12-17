@@ -12,7 +12,7 @@ public class JSONCountriesInitializer {
     //временная копия
     ArrayList<Country> countries = new ArrayList<>();
 
-    JSONCountriesInitializer(JSONObject JSONObject) {
+    public JSONCountriesInitializer(JSONObject JSONObject) {
         initializeList(JSONObject);
     }
 

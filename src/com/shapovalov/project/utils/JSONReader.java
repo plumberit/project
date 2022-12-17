@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 public class JSONReader {
 
-    public JSONObject init() {
+    public JSONObject initialize() {
         String JSONFileText = JSONFileReader();
         return JSONObjectCreator(JSONFileText);
     }
