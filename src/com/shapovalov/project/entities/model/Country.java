@@ -1,4 +1,4 @@
-package com.shapovalov.project.model;
+package com.shapovalov.project.entities.model;
 
 public class Country {
     private int id;
