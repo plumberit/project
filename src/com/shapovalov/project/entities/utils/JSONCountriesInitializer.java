@@ -5,7 +5,6 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
 public class JSONCountriesInitializer {
 
@@ -18,13 +17,15 @@ public class JSONCountriesInitializer {
 
     void initializeList(JSONObject obj) {
         JSONArray arr = (JSONArray) obj.get("countries 2020");
-        Iterator iterator = arr.iterator();
-        int i = 0;
-        while (iterator.hasNext()) {
-            countries.add(new Country());
-            JSONObject object = (JSONObject) iterator.next();
-            countries.get(i).setId((int) object.get("id"));
-            i++;
+        for (Object o : arr) {
+            JSONObject object = (JSONObject) o;
+            countries.add(new Country(
+                    (int) object.get("id"),
+                    (String) object.get("name"),
+                    (long) object.get("population"),
+                    (int) object.get("square"),
+                    (long) object.get("udp")
+            ));
         }
     }
 }

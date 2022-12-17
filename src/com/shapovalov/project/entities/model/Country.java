@@ -1,6 +1,15 @@
 package com.shapovalov.project.entities.model;
 
 public class Country {
+
+    public Country(int id, String name, long population, int square, long UDP) {
+        this.id = id;
+        this.name = name;
+        this.population = population;
+        this.square = square;
+        this.UDP = UDP;
+    }
+
     private int id;
     private String name;
     private long population;
