@@ -3,7 +3,7 @@ package com.shapovalov.project.app;
 public class App {
 
     public void run() {
-        appLayerSwitcher();
+        appLayer = appLayerSwitcher();
     }
 
     enum AppLayer {
@@ -11,7 +11,7 @@ public class App {
         PROCESS_LAYER;
     }
 
-    AppLayer appLayer = AppLayer.START_LAYER;
+    AppLayer appLayer;
 
     AppLayer appLayerSwitcher() {
 
