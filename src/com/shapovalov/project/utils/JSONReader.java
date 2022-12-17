@@ -1,8 +1,7 @@
 package com.shapovalov.project.utils;
 
 import com.shapovalov.project.entities.model.Country;
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
+import org.json.simple.*;
 import org.json.simple.parser.JSONParser;
 
 import java.io.FileReader;
@@ -17,15 +16,15 @@ public class JSONReader {
     ArrayList<Country> countries = new ArrayList<>();
 
     public void init() {
-        String str = databaseReader();
-        JSONObject obj = JSONCreator(str);
-        fillCountries(obj);
+        String JSONFileText = JSONFileReader();
+        JSONObject JSONObject = JSONObjectCreator(JSONFileText);
+        initializeList(JSONObject);
     }
 
-    private static String databaseReader() {
+    private static String JSONFileReader() {
         StringBuilder str = new StringBuilder();
         try {
-            FileReader fr = new FileReader("resources/data.json" );
+            FileReader fr = new FileReader("resources/data.json");
             Scanner scan = new Scanner(fr);
             while (scan.hasNextLine()) {
                 str.append(scan.nextLine());
@@ -37,7 +36,7 @@ public class JSONReader {
         return str.toString();
     }
 
-    private static JSONObject JSONCreator(String str) {
+    private static JSONObject JSONObjectCreator(String str) {
         JSONParser parser = new JSONParser();
         JSONObject obj = null;
         try {
@@ -48,7 +47,7 @@ public class JSONReader {
         return obj;
     }
 
-    void fillCountries(JSONObject obj) {
+    void initializeList(JSONObject obj) {
         JSONArray arr = (JSONArray) obj.get("countries 2020");
         Iterator iterator = arr.iterator();
         int i = 0;
