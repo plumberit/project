@@ -1,4 +1,4 @@
-package com.shapovalov.project.entities;
+package com.shapovalov.project.data;
 
 import com.shapovalov.project.entities.model.Country;
 
