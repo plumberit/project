@@ -1,4 +1,4 @@
-package com.shapovalov.project.utils;
+package com.shapovalov.utilities;
 
 import org.json.simple.*;
 import org.json.simple.parser.JSONParser;

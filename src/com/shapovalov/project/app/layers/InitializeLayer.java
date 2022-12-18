@@ -2,7 +2,7 @@ package com.shapovalov.project.app.layers;
 
 import com.shapovalov.project.data.Countries;
 import com.shapovalov.project.data.handler.CountriesInit;
-import com.shapovalov.project.utils.JSONReader;
+import com.shapovalov.utilities.JSONReader;
 import org.json.simple.JSONObject;
 
 public class InitializeLayer {
