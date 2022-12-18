@@ -8,7 +8,7 @@ import org.json.simple.JSONObject;
 import java.util.Iterator;
 
 
-public class JSONCountriesInitializer {
+public class CountriesInit {
 
     public void initialize(JSONObject JSONObject) {
         JSONArray arr = (JSONArray) JSONObject.get("countries 2020");
