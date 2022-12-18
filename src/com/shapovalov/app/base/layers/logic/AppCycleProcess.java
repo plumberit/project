@@ -1,6 +1,6 @@
-package com.shapovalov.project.app.layers.logic;
+package com.shapovalov.app.base.layers.logic;
 
-import com.shapovalov.project.view.View;
+import com.shapovalov.app.view.View;
 
 public class AppCycleProcess {
     public void run() {

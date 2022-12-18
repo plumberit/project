@@ -1,8 +1,8 @@
-package com.shapovalov.project.app;
+package com.shapovalov.app.base;
 
-import com.shapovalov.project.app.layers.InitializeLayer;
-import com.shapovalov.project.app.layers.ProcessLayer;
-import com.shapovalov.project.app.layers.StartLayer;
+import com.shapovalov.app.base.layers.InitializeLayer;
+import com.shapovalov.app.base.layers.ProcessLayer;
+import com.shapovalov.app.base.layers.StartLayer;
 
 public class App {
 

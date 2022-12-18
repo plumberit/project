@@ -1,6 +1,6 @@
-package com.shapovalov.project.data;
+package com.shapovalov.app.data;
 
-import com.shapovalov.project.model.Country;
+import com.shapovalov.app.model.Country;
 
 import java.util.ArrayList;
 

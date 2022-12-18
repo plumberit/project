@@ -1,6 +1,6 @@
-package com.shapovalov.project.app.layers;
+package com.shapovalov.app.base.layers;
 
-import com.shapovalov.project.app.layers.logic.AppCycleProcess;
+import com.shapovalov.app.base.layers.logic.AppCycleProcess;
 
 public class ProcessLayer {
 

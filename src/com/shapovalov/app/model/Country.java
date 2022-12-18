@@ -1,4 +1,4 @@
-package com.shapovalov.project.model;
+package com.shapovalov.app.model;
 
 public class Country {
 

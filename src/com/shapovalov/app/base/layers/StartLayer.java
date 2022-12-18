@@ -1,6 +1,6 @@
-package com.shapovalov.project.app.layers;
+package com.shapovalov.app.base.layers;
 
-import com.shapovalov.project.view.View;
+import com.shapovalov.app.view.View;
 
 public class StartLayer {
     public void run() {

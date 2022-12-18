@@ -1,6 +1,6 @@
-package com.shapovalov.project;
+package com.shapovalov.app;
 
-import com.shapovalov.project.app.App;
+import com.shapovalov.app.base.App;
 
 public class Main {
     public static void main(String[] args) {

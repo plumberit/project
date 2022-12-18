@@ -1,7 +1,7 @@
-package com.shapovalov.project.app.layers;
+package com.shapovalov.app.base.layers;
 
-import com.shapovalov.project.data.Countries;
-import com.shapovalov.project.data.handler.CountriesInit;
+import com.shapovalov.app.data.Countries;
+import com.shapovalov.app.data.handler.CountriesInit;
 import com.shapovalov.utilities.JSONReader;
 import org.json.simple.JSONObject;
 

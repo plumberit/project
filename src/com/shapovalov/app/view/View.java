@@ -1,4 +1,4 @@
-package com.shapovalov.project.view;
+package com.shapovalov.app.view;
 
 import java.util.Scanner;
 
