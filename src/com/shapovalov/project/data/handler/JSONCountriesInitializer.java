@@ -1,7 +1,7 @@
 package com.shapovalov.project.data.handler;
 
 import com.shapovalov.project.data.Countries;
-import com.shapovalov.project.entities.model.Country;
+import com.shapovalov.project.model.Country;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
