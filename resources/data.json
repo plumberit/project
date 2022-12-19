@@ -36,15 +36,41 @@
       "command pack v-1": [
         {
           "id": 1,
-          "command": "COMPARE"
+          "command": "HELP",
+          "type": "system",
+          "description": "",
+          "examples": []
         },
         {
           "id": 2,
-          "command": "CREATE UNION"
+          "command": "COMPARE",
+          "type": "app",
+          "description": "команда для сравнения стран и союзов",
+          "examples": [
+            "COMPARE [Country 1] [Country 2]",
+            "COMPARE [Switzerland] [Turkey]",
+            "COMPARE [Country 1] [Unit 1]",
+            "COMPARE [Great Britain] [Unit of Gas]",
+            "COMPARE [Unit 1] [Unit 2]",
+            "COMPARE [Unit of Gas] [Ocean Unit]"]
         },
         {
           "id": 3,
-          "command": "DELETE UNION"
+          "command": "CREATE UNION",
+          "type": "app",
+          "description": "команда для создания союза",
+          "examples": [
+            "CREATE UNION [union_name] : [Country 1] [Country 2] [Country 3]"]
+        },
+        {
+          "id": 4,
+          "command": "DELETE UNION",
+          "type": "app",
+          "description": "команда для сравнения стран и союзов",
+          "examples": [
+            "COMPARE [Country 1] [Country 2]",
+            "COMPARE [Country 1] [Unit 1]",
+            "COMPARE [Unit 1] [Unit 2]"]
         }
       ]
     }
