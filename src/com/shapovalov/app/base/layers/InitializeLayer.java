@@ -1,7 +1,6 @@
 package com.shapovalov.app.base.layers;
 
-import com.shapovalov.app.data.Countries;
-import com.shapovalov.app.data.handler.CountriesInit;
+import com.shapovalov.app.data.handler.CountriesInitializer;
 import com.shapovalov.utilities.JSONReader;
 import org.json.simple.JSONObject;
 
@@ -11,7 +10,11 @@ public class InitializeLayer {
         //подправить
         JSONReader reader = new JSONReader();
         JSONObject obj = reader.read("resources/data.json");
-        CountriesInit init = new CountriesInit();
+
+
+        CountriesInitializer init = new CountriesInitializer();
         init.initialize(obj);
+
+
     }
 }

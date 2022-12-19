@@ -27,5 +27,29 @@
 
 
     }
-  ]
+  ],
+
+
+
+  "command packs": [
+    {
+      "command pack v-1": [
+        {
+          "id": 1,
+          "command": "COMPARE"
+        },
+        {
+          "id": 2,
+          "command": "CREATE UNION"
+        },
+        {
+          "id": 3,
+          "command": "DELETE UNION"
+        }
+      ]
+    }
+    ]
+
+
+
 }
