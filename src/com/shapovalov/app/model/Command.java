@@ -1,4 +1,4 @@
-package com.shapovalov.app.backend.command;
+package com.shapovalov.app.model;
 
 public class Command {
     private String command;
