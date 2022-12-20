@@ -1,6 +1,6 @@
 package com.shapovalov.app.backend.command;
 
-import com.shapovalov.app.model.Command;
+import com.shapovalov.app.model.command.Command;
 
 public class CommandCenter {
 

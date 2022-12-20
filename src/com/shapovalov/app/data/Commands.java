@@ -1,6 +1,6 @@
 package com.shapovalov.app.data;
 
-import com.shapovalov.app.model.Command;
+import com.shapovalov.app.model.command.Command;
 
 import java.util.ArrayList;
 
