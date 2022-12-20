@@ -1358,8 +1358,8 @@
       "command pack v1": [
         {
           "id": 1,
-          "command": "COMPARE",
-          "parameter": true,
+          "command name": "COMPARE",
+          "isParameter": true,
           "description": "команда для сравнения стран и союзов",
           "examples": [
             "COMPARE [Country 1] [Country 2]",
@@ -1372,8 +1372,8 @@
         },
         {
           "id": 2,
-          "command": "CREATE UNION",
-          "parameter": true,
+          "command name": "CREATE UNION",
+          "isParameter": true,
           "description": "команда для создания союза",
           "examples": [
             "CREATE UNION [union_name] : [Country 1] [Country 2] [Country 3]",
@@ -1382,8 +1382,8 @@
         },
         {
           "id": 3,
-          "command": "DELETE UNION",
-          "parameter": true,
+          "command name": "DELETE UNION",
+          "isParameter": true,
           "description": "команда для удаления союза",
           "examples": [
             "DELETE UNION [union_name]",
@@ -1392,8 +1392,8 @@
         },
         {
           "id": 4,
-          "command": "SHOW COUNTRIES",
-          "parameter": false,
+          "command name": "SHOW COUNTRIES",
+          "isParameter": false,
           "description": "команда для отображения всех стран",
           "examples": [
             "SHOW COUNTRIES"
@@ -1401,8 +1401,8 @@
         },
         {
           "id": 5,
-          "command": "SHOW UNITS",
-          "parameter": false,
+          "command name": "SHOW UNITS",
+          "isParameter": false,
           "description": "команда для отображения созданных союзов",
           "examples": [
             "SHOW UNITS"
@@ -1410,8 +1410,8 @@
         },
         {
           "id": 6,
-          "command": "UNIT",
-          "parameter": true,
+          "command name": "UNIT",
+          "isParameter": true,
           "description": "команда для отображения стран внутри союза",
           "examples": [
             "UNIT [unit_name]",
