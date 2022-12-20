@@ -26,12 +26,12 @@ public class CollectionInitializer {
                     (int) object.get("square"),
                     (long) object.get("udp")
             ));
-
+/*
             Commands.commands.add(new Command(
                     (int) object.get("id"),
                     (String) object.get("command"),
                     (String) object.get("info")
-            ));
+            ));*/
 
         }
     }

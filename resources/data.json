@@ -1,36 +1,1358 @@
 {
   "country packs": [
     {
-
-
       "countries 2020": [
-        {"id": 1,
-          "name": "USA",
-          "population": 330000000,
-          "square": 10000000,
-          "GDP": 20000000000000
+        {
+          "id": 1,
+          "name": "Afghanistan",
+          "population": 39835428,
+          "square": 652230,
+          "GDP": 20116137326
         },
-        {"id": 2,
+        {
+          "id": 2,
+          "name": "Albania",
+          "population": 2811666,
+          "square": 27400,
+          "GDP": 18260043500
+        },
+        {
+          "id": 3,
+          "name": "Algeria",
+          "population": 44616626,
+          "square": 2381741,
+          "GDP": 167983000000
+        },
+        {
+          "id": 4,
+          "name": "Andorra",
+          "population": 77354,
+          "square": 470,
+          "GDP": 3329910724
+        },
+        {
+          "id": 5,
+          "name": "Angola",
+          "population": 33933611,
+          "square": 1246700,
+          "GDP": 72546985709
+        },
+        {
+          "id": 6,
+          "name": "Antigua and Barbuda",
+          "population": 98728,
+          "square": 440,
+          "GDP": 1471125926
+        },
+        {
+          "id": 7,
+          "name": "Argentina",
+          "population": 45808747,
+          "square": 2736690,
+          "GDP": 491493000000
+        },
+        {
+          "id": 8,
+          "name": "Armenia",
+          "population": 2968128,
+          "square": 28470,
+          "GDP": 13861183874
+        },
+        {
+          "id": 9,
+          "name": "Australia",
+          "population": 25739256,
+          "square": 7692020,
+          "GDP": 1542660000000
+        },
+        {
+          "id": 10,
+          "name": "Austria",
+          "population": 8956279,
+          "square": 82520,
+          "GDP": 477082000000
+        },
+        {
+          "id": 11,
+          "name": "Azerbaijan",
+          "population": 10145212,
+          "square": 82646,
+          "GDP": 54622176471
+        },
+        {
+          "id": 12,
+          "name": "Bahamas",
+          "population": 396914,
+          "square": 10010,
+          "GDP": 11208600000
+        },
+        {
+          "id": 13,
+          "name": "Bahrain",
+          "population": 1748295,
+          "square": 785,
+          "GDP": 38868663032
+        },
+        {
+          "id": 14,
+          "name": "Bangladesh",
+          "population": 166303494,
+          "square": 130170,
+          "GDP": 416265000000
+        },
+        {
+          "id": 15,
+          "name": "Barbados",
+          "population": 287708,
+          "square": 430,
+          "GDP": 4900800000
+        },
+        {
+          "id": 16,
+          "name": "Belarus",
+          "population": 9340314,
+          "square": 202980,
+          "GDP": 68218816484
+        },
+        {
+          "id": 17,
+          "name": "Belgium",
+          "population": 11587882,
+          "square": 30280,
+          "GDP": 599879000000
+        },
+        {
+          "id": 18,
+          "name": "Belize",
+          "population": 404915,
+          "square": 22810,
+          "GDP": 1789923264
+        },
+        {
+          "id": 19,
+          "name": "Benin",
+          "population": 12451031,
+          "square": 112760,
+          "GDP": 17785640079
+        },
+        {
+          "id": 20,
+          "name": "Bhutan",
+          "population": 779900,
+          "square": 38140,
+          "GDP": 2315436303
+        },
+        {
+          "id": 21,
+          "name": "Bolivia",
+          "population": 11832936,
+          "square": 1083300,
+          "GDP": 40408208524
+        },
+        {
+          "id": 22,
+          "name": "Bosnia and Herzegovina",
+          "population": 3263459,
+          "square": 51200,
+          "GDP": 22571512867
+        },
+        {
+          "id": 23,
+          "name": "Botswana",
+          "population": 2397240,
+          "square": 566730,
+          "GDP": 17613846473
+        },
+        {
+          "id": 24,
+          "name": "Brazil",
+          "population": 213993441,
+          "square": 8358140,
+          "GDP": 1608980000000
+        },
+        {
+          "id": 25,
+          "name": "Brunei Darussalam",
+          "population": 441532,
+          "square": 5270,
+          "GDP": 14006569576
+        },
+        {
+          "id": 26,
+          "name": "Bulgaria",
+          "population": 6899125,
+          "square": 108560,
+          "GDP": 80271119426
+        },
+        {
+          "id": 27,
+          "name": "Burkina Faso",
+          "population": 21497097,
+          "square": 273600,
+          "GDP": 19737615114
+        },
+        {
+          "id": 28,
+          "name": "Burundi",
+          "population": 12255429,
+          "square": 25680,
+          "GDP": 2902029386
+        },
+        {
+          "id": 29,
+          "name": "Cabo Verde",
+          "population": 561901,
+          "square": 4030,
+          "GDP": 1936174043
+        },
+        {
+          "id": 30,
+          "name": "Cambodia",
+          "population": 16946446,
+          "square": 176520,
+          "GDP": 26961061120
+        },
+        {
+          "id": 31,
+          "name": "Cameroon",
+          "population": 27224262,
+          "square": 472710,
+          "GDP": 45238613480
+        },
+        {
+          "id": 32,
           "name": "Canada",
-          "population": 40000000,
-          "square": 12000000,
-          "GDP": 2000000000000
+          "population": 38246108,
+          "square": 8965590,
+          "GDP": 1990760000000
         },
-        {"id": 3,
+        {
+          "id": 33,
+          "name": "Central African Republic",
+          "population": 4919987,
+          "square": 622980,
+          "GDP": 2516498299
+        },
+        {
+          "id": 34,
+          "name": "Chad",
+          "population": 16914985,
+          "square": 1259200,
+          "GDP": 11779980802
+        },
+        {
+          "id": 35,
+          "name": "Chile",
+          "population": 19212362,
+          "square": 743532,
+          "GDP": 317059000000
+        },
+        {
+          "id": 36,
+          "name": "China",
+          "population": 1412360000,
+          "square": 9424702.9,
+          "GDP": 17734100000000
+        },
+        {
+          "id": 37,
+          "name": "Colombia",
+          "population": 51265841,
+          "square": 1109500,
+          "GDP": 314322000000
+        },
+        {
+          "id": 38,
+          "name": "Comoros",
+          "population": 888456,
+          "square": 1861,
+          "GDP": 1327964249
+        },
+        {
+          "id": 39,
+          "name": "Congo (Democratic Republic)",
+          "population": 92377986,
+          "square": 2267050,
+          "GDP": 53958573693
+        },
+        {
+          "id": 40,
+          "name": "Congo (Republic)",
+          "population": 5657017,
+          "square": 341500,
+          "GDP": 12523961677
+        },
+        {
+          "id": 41,
+          "name": "Costa Rica",
+          "population": 5139053,
+          "square": 51060,
+          "GDP": 64282438667
+        },
+        {
+          "id": 42,
+          "name": "Cote d'Ivoire",
+          "population": 27053629,
+          "square": 318000,
+          "GDP": 69764827467
+        },
+        {
+          "id": 43,
+          "name": "Croatia",
+          "population": 3899000,
+          "square": 55960,
+          "GDP": 67837788544
+        },
+        {
+          "id": 44,
+          "name": "Cuba",
+          "population": 11317498,
+          "square": 103800,
+          "GDP": 107352000000
+        },
+        {
+          "id": 45,
+          "name": "Cyprus",
+          "population": 1215588,
+          "square": 9240,
+          "GDP": 27719337670
+        },
+        {
+          "id": 46,
+          "name": "Czechia",
+          "population": 10703446,
+          "square": 77198.53,
+          "GDP": 282341000000
+        },
+        {
+          "id": 47,
+          "name": "Denmark",
+          "population": 5856733,
+          "square": 40000,
+          "GDP": 397104000000
+        },
+        {
+          "id": 48,
+          "name": "Djibouti",
+          "population": 1002197,
+          "square": 23180,
+          "GDP": 3371102124
+        },
+        {
+          "id": 49,
+          "name": "Dominica",
+          "population": 72172,
+          "square": 750,
+          "GDP": 545618519
+        },
+        {
+          "id": 50,
+          "name": "Dominican Republic",
+          "population": 10953714,
+          "square": 48310,
+          "GDP": 94243453937
+        },
+        {
+          "id": 51,
+          "name": "Ecuador",
+          "population": 17888474,
+          "square": 248360,
+          "GDP": 106166000000
+        },
+        {
+          "id": 52,
+          "name": "Egypt",
+          "population": 104258327,
+          "square": 995450,
+          "GDP": 404143000000
+        },
+        {
+          "id": 53,
+          "name": "El Salvador",
+          "population": 6518500,
+          "square": 20720,
+          "GDP": 28736940000
+        },
+        {
+          "id": 54,
+          "name": "Equatorial Guinea",
+          "population": 1449891,
+          "square": 28050,
+          "GDP": 12269392789
+        },
+        {
+          "id": 55,
+          "name": "Eritrea",
+          "population": 6209262,
+          "square": 121040.829
+        },
+        {
+          "id": 56,
+          "name": "Estonia",
+          "population": 1329254,
+          "square": 42750,
+          "GDP": 36262924354
+        },
+        {
+          "id": 57,
+          "name": "Eswatini",
+          "population": 1172369,
+          "square": 17200,
+          "GDP": 4941373182
+        },
+        {
+          "id": 58,
+          "name": "Ethiopia",
+          "population": 117876226,
+          "square": 1128571.265,
+          "GDP": 111271000000
+        },
+        {
+          "id": 59,
+          "name": "Fiji",
+          "population": 902899,
+          "square": 18270,
+          "GDP": 4592118710
+        },
+        {
+          "id": 60,
+          "name": "Finland",
+          "population": 5541696,
+          "square": 303940,
+          "GDP": 299155000000
+        },
+        {
+          "id": 61,
+          "name": "France",
+          "population": 67499343,
+          "square": 547557,
+          "GDP": 2937470000000
+        },
+        {
+          "id": 62,
+          "name": "Gabon",
+          "population": 2278829,
+          "square": 257670,
+          "GDP": 18269350434
+        },
+        {
+          "id": 63,
+          "name": "Gambia",
+          "population": 2486937,
+          "square": 10120,
+          "GDP": 2078070684
+        },
+        {
+          "id": 64,
+          "name": "Georgia",
+          "population": 3708610,
+          "square": 69490,
+          "GDP": 18700241392
+        },
+        {
+          "id": 65,
           "name": "Germany",
-          "population": 80000000,
-          "square": 400000,
-          "GDP": 30000000000000
+          "population": 83129285,
+          "square": 349390,
+          "GDP": 4223120000000
+        },
+        {
+          "id": 66,
+          "name": "Ghana",
+          "population": 31732128,
+          "square": 227533,
+          "GDP": 77594279055
+        },
+        {
+          "id": 67,
+          "name": "Great Britian",
+          "population": 67326569,
+          "square": 241930,
+          "GDP": 3186860000000
+        },
+        {
+          "id": 68,
+          "name": "Greece",
+          "population": 10664568,
+          "square": 128900,
+          "GDP": 216241000000
+        },
+        {
+          "id": 69,
+          "name": "Grenada",
+          "population": 113015,
+          "square": 340,
+          "GDP": 1122083185
+        },
+        {
+          "id": 70,
+          "name": "Guatemala",
+          "population": 17109746,
+          "square": 107160,
+          "GDP": 85986321551
+        },
+        {
+          "id": 71,
+          "name": "Guinea",
+          "population": 13497237,
+          "square": 245720,
+          "GDP": 15850520384
+        },
+        {
+          "id": 72,
+          "name": "Guinea-Bissau",
+          "population": 2015490,
+          "square": 28120,
+          "GDP": 1638517533
+        },
+        {
+          "id": 73,
+          "name": "Guyana",
+          "population": 790329,
+          "square": 196850,
+          "GDP": 7409179921
+        },
+        {
+          "id": 74,
+          "name": "Haiti",
+          "population": 11541683,
+          "square": 27560,
+          "GDP": 20944392615
+        },
+        {
+          "id": 75,
+          "name": "Honduras",
+          "population": 10062994,
+          "square": 111890,
+          "GDP": 28488668302
+        },
+        {
+          "id": 76,
+          "name": "Hungary",
+          "population": 9709886,
+          "square": 91260,
+          "GDP": 182281000000
+        },
+        {
+          "id": 77,
+          "name": "Iceland",
+          "population": 372295,
+          "square": 100830,
+          "GDP": 25458933916
+        },
+        {
+          "id": 78,
+          "name": "India",
+          "population": 1393409033,
+          "square": 2973190,
+          "GDP": 3173400000000
+        },
+        {
+          "id": 79,
+          "name": "Indonesia",
+          "population": 276361788,
+          "square": 1877519,
+          "GDP": 1186090000000
+        },
+        {
+          "id": 80,
+          "name": "Iran",
+          "population": 85028760,
+          "square": 1622500,
+          "GDP": 231547571240
+        },
+        {
+          "id": 81,
+          "name": "Iraq",
+          "population": 41179351,
+          "square": 434128,
+          "GDP": 207889000000
+        },
+        {
+          "id": 82,
+          "name": "Ireland",
+          "population": 5028230,
+          "square": 68890,
+          "GDP": 498560000000
+        },
+        {
+          "id": 83,
+          "name": "Israel",
+          "population": 9364000,
+          "square": 21640,
+          "GDP": 481591000000
+        },
+        {
+          "id": 84,
+          "name": "Italy",
+          "population": 59066225,
+          "square": 295717,
+          "GDP": 2099880000000
+        },
+        {
+          "id": 85,
+          "name": "Jamaica",
+          "population": 2973462,
+          "square": 10830,
+          "GDP": 13638230996
+        },
+        {
+          "id": 86,
+          "name": "Japan",
+          "population": 125681593,
+          "square": 364500,
+          "GDP": 4937420000000
+        },
+        {
+          "id": 87,
+          "name": "Jordan",
+          "population": 10269022,
+          "square": 88794,
+          "GDP": 45243661972
+        },
+        {
+          "id": 88,
+          "name": "Kazakhstan",
+          "population": 19002586,
+          "square": 2699700,
+          "GDP": 190814000000
+        },
+        {
+          "id": 89,
+          "name": "Kenya",
+          "population": 54985702,
+          "square": 569140,
+          "GDP": 110347000000
+        },
+        {
+          "id": 90,
+          "name": "Kiribati",
+          "population": 121388,
+          "square": 810,
+          "GDP": 180911844
+        },
+        {
+          "id": 91,
+          "name": "Korea (North)",
+          "population": 25887045,
+          "square": 120410
+        },
+        {
+          "id": 92,
+          "name": "Korea (South)",
+          "population": 51744876,
+          "square": 97600,
+          "GDP": 1798530000000
+        },
+        {
+          "id": 93,
+          "name": "Kuwait",
+          "population": 4328553,
+          "square": 17820,
+          "GDP": 105960225688
+        },
+        {
+          "id": 94,
+          "name": "Kyrgyzstan",
+          "population": 6694200,
+          "square": 191800,
+          "GDP": 8543423503
+        },
+        {
+          "id": 95,
+          "name": "Lao PDR",
+          "population": 7379358,
+          "square": 230800,
+          "GDP": 18827148530
+        },
+        {
+          "id": 96,
+          "name": "Latvia",
+          "population": 1883162,
+          "square": 62230,
+          "GDP": 38872546229
+        },
+        {
+          "id": 97,
+          "name": "Lebanon",
+          "population": 6769151,
+          "square": 10230,
+          "GDP": 18076624840
+        },
+        {
+          "id": 98,
+          "name": "Lesotho",
+          "population": 2159067,
+          "square": 30360,
+          "GDP": 2518468891
+        },
+        {
+          "id": 99,
+          "name": "Liberia",
+          "population": 5180208,
+          "square": 96320,
+          "GDP": 3486741370
+        },
+        {
+          "id": 100,
+          "name": "Libya",
+          "population": 6958538,
+          "square": 1759540,
+          "GDP": 41879579677
+        },
+        {
+          "id": 101,
+          "name": "Liechtenstein",
+          "population": 38254,
+          "square": 160,
+          "GDP": 6427248943
+        },
+        {
+          "id": 102,
+          "name": "Lithuania",
+          "population": 2795321,
+          "square": 62620,
+          "GDP": 65503849705
+        },
+        {
+          "id": 103,
+          "name": "Luxembourg",
+          "population": 639070,
+          "square": 2574.46,
+          "GDP": 86710803337
+        },
+        {
+          "id": 104,
+          "name": "Madagascar",
+          "population": 28427333,
+          "square": 581800,
+          "GDP": 14637400396
+        },
+        {
+          "id": 105,
+          "name": "Malawi",
+          "population": 19647681,
+          "square": 94280,
+          "GDP": 12626718074
+        },
+        {
+          "id": 106,
+          "name": "Malaysia",
+          "population": 32776195,
+          "square": 328550,
+          "GDP": 372701000000
+        },
+        {
+          "id": 107,
+          "name": "Maldives",
+          "population": 543620,
+          "square": 300,
+          "GDP": 4889666932
+        },
+        {
+          "id": 108,
+          "name": "Mali",
+          "population": 20855724,
+          "square": 1220190,
+          "GDP": 19143741503
+        },
+        {
+          "id": 109,
+          "name": "Malta",
+          "population": 516869,
+          "square": 320,
+          "GDP": 17189730470
+        },
+        {
+          "id": 110,
+          "name": "Marshall Islands",
+          "population": 59618,
+          "square": 180,
+          "GDP": 248665600
+        },
+        {
+          "id": 111,
+          "name": "Mauritania",
+          "population": 4775110,
+          "square": 1030700,
+          "GDP": 8227580740
+        },
+        {
+          "id": 112,
+          "name": "Mauritius",
+          "population": 1266060,
+          "square": 2030,
+          "GDP": 11156657770
+        },
+        {
+          "id": 113,
+          "name": "Mexico",
+          "population": 130262220,
+          "square": 1943950,
+          "GDP": 1293040000000
+        },
+        {
+          "id": 114,
+          "name": "Micronesia",
+          "population": 116255,
+          "square": 700,
+          "GDP": 404178050
+        },
+        {
+          "id": 115,
+          "name": "Moldova",
+          "population": 2573928,
+          "square": 32884.6,
+          "GDP": 13679221333
+        },
+        {
+          "id": 116,
+          "name": "Monaco",
+          "population": 39520,
+          "square": 2.027,
+          "GDP": 6816219303
+        },
+        {
+          "id": 117,
+          "name": "Mongolia",
+          "population": 3329282,
+          "square": 1557506.803,
+          "GDP": 15098022829
+        },
+        {
+          "id": 118,
+          "name": "Montenegro",
+          "population": 620173,
+          "square": 13450,
+          "GDP": 5809170962
+        },
+        {
+          "id": 119,
+          "name": "Morocco",
+          "population": 37344787,
+          "square": 446300,
+          "GDP": 132725000000
+        },
+        {
+          "id": 120,
+          "name": "Mozambique",
+          "population": 32163045,
+          "square": 786380,
+          "GDP": 16095828897
+        },
+        {
+          "id": 121,
+          "name": "Myanmar",
+          "population": 54806014,
+          "square": 652670,
+          "GDP": 65067808985
+        },
+        {
+          "id": 122,
+          "name": "Namibia",
+          "population": 2587344,
+          "square": 823290,
+          "GDP": 12236250784
+        },
+        {
+          "id": 123,
+          "name": "Nauru",
+          "population": 10873,
+          "square": 20,
+          "GDP": 133218897
+        },
+        {
+          "id": 124,
+          "name": "Nepal",
+          "population": 29674920,
+          "square": 143350,
+          "GDP": 36288830373
+        },
+        {
+          "id": 125,
+          "name": "Netherlands",
+          "population": 17533405,
+          "square": 33670,
+          "GDP": 1018010000000
+        },
+        {
+          "id": 126,
+          "name": "New Zealand",
+          "population": 5122600,
+          "square": 263310,
+          "GDP": 249992000000
+        },
+        {
+          "id": 127,
+          "name": "Nicaragua",
+          "population": 6702379,
+          "square": 120340,
+          "GDP": 14013022092
+        },
+        {
+          "id": 128,
+          "name": "Niger",
+          "population": 25130810,
+          "square": 1266700,
+          "GDP": 14950949875
+        },
+        {
+          "id": 129,
+          "name": "Nigeria",
+          "population": 211400704,
+          "square": 910770,
+          "GDP": 440777000000
+        },
+        {
+          "id": 130,
+          "name": "North Macedonia",
+          "population": 2065092,
+          "square": 25220,
+          "GDP": 13879269152
+        },
+        {
+          "id": 131,
+          "name": "Norway",
+          "population": 5408320,
+          "square": 364285,
+          "GDP": 482437000000
+        },
+        {
+          "id": 132,
+          "name": "Oman",
+          "population": 5223376,
+          "square": 309500,
+          "GDP": 85868626528
+        },
+        {
+          "id": 133,
+          "name": "Pakistan",
+          "population": 225199929,
+          "square": 770880,
+          "GDP": 346343000000
+        },
+        {
+          "id": 134,
+          "name": "Palau",
+          "population": 18174,
+          "square": 460,
+          "GDP": 257700000
+        },
+        {
+          "id": 135,
+          "name": "Panama",
+          "population": 4381583,
+          "square": 74180,
+          "GDP": 63605065800
+        },
+        {
+          "id": 136,
+          "name": "Papua New Guinea",
+          "population": 9119005,
+          "square": 452860,
+          "GDP": 26594277246
+        },
+        {
+          "id": 137,
+          "name": "Paraguay",
+          "population": 7219641,
+          "square": 397300,
+          "GDP": 38986810989
+        },
+        {
+          "id": 138,
+          "name": "Peru",
+          "population": 33359416,
+          "square": 1280000,
+          "GDP": 223249000000
+        },
+        {
+          "id": 139,
+          "name": "Philippines",
+          "population": 111046910,
+          "square": 298170,
+          "GDP": 394086000000
+        },
+        {
+          "id": 140,
+          "name": "Poland",
+          "population": 37781024,
+          "square": 306130,
+          "GDP": 674048000000
+        },
+        {
+          "id": 141,
+          "name": "Portugal",
+          "population": 10299423,
+          "square": 91605.6,
+          "GDP": 249886000000
+        },
+        {
+          "id": 142,
+          "name": "Qatar",
+          "population": 2930524,
+          "square": 11490,
+          "GDP": 179571000000
+        },
+        {
+          "id": 143,
+          "name": "Romania",
+          "population": 19115146,
+          "square": 230080,
+          "GDP": 284088000000
+        },
+        {
+          "id": 144,
+          "name": "Russia",
+          "population": 143446060,
+          "square": 16376870,
+          "GDP": 1775800000000
+        },
+        {
+          "id": 145,
+          "name": "Rwanda",
+          "population": 13276517,
+          "square": 24670,
+          "GDP": 11070356519
+        },
+        {
+          "id": 146,
+          "name": "Saint Kitts and Nevis",
+          "population": 53546,
+          "square": 260,
+          "GDP": 976150667
+        },
+        {
+          "id": 147,
+          "name": "Saint Lucia",
+          "population": 184401,
+          "square": 610,
+          "GDP": 1764901133
+        },
+        {
+          "id": 148,
+          "name": "Saint Vincent and the Grenadines",
+          "population": 111269,
+          "square": 390,
+          "GDP": 889775243
+        },
+        {
+          "id": 149,
+          "name": "Samoa",
+          "population": 200144,
+          "square": 2780,
+          "GDP": 788389972
+        },
+        {
+          "id": 150,
+          "name": "San Marino",
+          "population": 34010,
+          "square": 60,
+          "GDP": 1544713785
+        },
+        {
+          "id": 151,
+          "name": "Sao Tome and Principe",
+          "population": 223364,
+          "square": 960,
+          "GDP": 547092915
+        },
+        {
+          "id": 152,
+          "name": "Saudi Arabia",
+          "population": 35340680,
+          "square": 2149690,
+          "GDP": 833541000000
+        },
+        {
+          "id": 153,
+          "name": "Senegal",
+          "population": 17196308,
+          "square": 192530,
+          "GDP": 27625388352
+        },
+        {
+          "id": 154,
+          "name": "Serbia",
+          "population": 6844078,
+          "square": 87460,
+          "GDP": 63068134601
+        },
+        {
+          "id": 155,
+          "name": "Seychelles",
+          "population": 99202,
+          "square": 460,
+          "GDP": 1320053793
+        },
+        {
+          "id": 156,
+          "name": "Sierra Leone",
+          "population": 8141343,
+          "square": 72180,
+          "GDP": 4200380124
+        },
+        {
+          "id": 157,
+          "name": "Singapore",
+          "population": 5453566,
+          "square": 718,
+          "GDP": 396987000000
+        },
+        {
+          "id": 158,
+          "name": "Slovakia",
+          "population": 5447247,
+          "square": 48080,
+          "GDP": 114871000000
+        },
+        {
+          "id": 159,
+          "name": "Slovenia",
+          "population": 2107007,
+          "square": 20136.4,
+          "GDP": 61526331889
+        },
+        {
+          "id": 160,
+          "name": "Solomon Islands",
+          "population": 703995,
+          "square": 27990,
+          "GDP": 1645213882
+        },
+        {
+          "id": 161,
+          "name": "Somalia",
+          "population": 16359500,
+          "square": 627340,
+          "GDP": 7292721820
+        },
+        {
+          "id": 162,
+          "name": "South Africa",
+          "population": 60041996,
+          "square": 1213090,
+          "GDP": 419946428126
+        },
+        {
+          "id": 163,
+          "name": "South Sudan",
+          "population": 11381377,
+          "square": 631930,
+          "GDP": 11997800760
+        },
+        {
+          "id": 164,
+          "name": "Spain",
+          "population": 47326687,
+          "square": 499556.645,
+          "GDP": 1425280000000
+        },
+        {
+          "id": 165,
+          "name": "Sri Lanka",
+          "population": 22156000,
+          "square": 61860,
+          "GDP": 84518830393
+        },
+        {
+          "id": 166,
+          "name": "Sudan",
+          "population": 44909351,
+          "square": 1868000,
+          "GDP": 34326058557
+        },
+        {
+          "id": 167,
+          "name": "Suriname",
+          "population": 591798,
+          "square": 156000,
+          "GDP": 2862131980
+        },
+        {
+          "id": 168,
+          "name": "Sweden",
+          "population": 10415811,
+          "square": 407283.532,
+          "GDP": 627438000000
+        },
+        {
+          "id": 169,
+          "name": "Switzerland",
+          "population": 8697723,
+          "square": 39516.03,
+          "GDP": 812867000000
+        },
+        {
+          "id": 170,
+          "name": "Syria",
+          "population": 18275704,
+          "square": 183630,
+          "GDP": 21445775364
+        },
+        {
+          "id": 171,
+          "name": "Tajikistan",
+          "population": 9749625,
+          "square": 138790,
+          "GDP": 8746270636
+        },
+        {
+          "id": 172,
+          "name": "Tanzania",
+          "population": 61498438,
+          "square": 885800,
+          "GDP": 67775101794
+        },
+        {
+          "id": 173,
+          "name": "Thailand",
+          "population": 69950844,
+          "square": 510890,
+          "GDP": 505982000000
+        },
+        {
+          "id": 174,
+          "name": "Timor-Leste",
+          "population": 1343875,
+          "square": 14870,
+          "GDP": 1959134744
+        },
+        {
+          "id": 175,
+          "name": "Togo",
+          "population": 8478242,
+          "square": 54390,
+          "GDP": 8413200568
+        },
+        {
+          "id": 176,
+          "name": "Tonga",
+          "population": 106759,
+          "square": 720,
+          "GDP": 488829964
+        },
+        {
+          "id": 177,
+          "name": "Trinidad and Tobago",
+          "population": 1403374,
+          "square": 5130,
+          "GDP": 21391802311
+        },
+        {
+          "id": 178,
+          "name": "Tunisia",
+          "population": 11935764,
+          "square": 155360,
+          "GDP": 46840042941
+        },
+        {
+          "id": 179,
+          "name": "Türkiye",
+          "population": 85042736,
+          "square": 769630,
+          "GDP": 815272000000
+        },
+        {
+          "id": 180,
+          "name": "Turkmenistan",
+          "population": 6117933,
+          "square": 469930,
+          "GDP": 45231428571
+        },
+        {
+          "id": 181,
+          "name": "Tuvalu",
+          "population": 11925,
+          "square": 30,
+          "GDP": 63100962
+        },
+        {
+          "id": 182,
+          "name": "Uganda",
+          "population": 47123533,
+          "square": 200520,
+          "GDP": 40434701517
+        },
+        {
+          "id": 183,
+          "name": "Ukraine",
+          "population": 43814581,
+          "square": 579400,
+          "GDP": 200086000000
+        },
+        {
+          "id": 184,
+          "name": "United Arab Emirates",
+          "population": 9991083,
+          "square": 71020,
+          "GDP": 358868765175
+        },
+        {
+          "id": 185,
+          "name": "Uruguay",
+          "population": 3485152,
+          "square": 175020,
+          "GDP": 59319547636
+        },
+        {
+          "id": 186,
+          "name": "USA",
+          "population": 331893745,
+          "square": 9147420,
+          "GDP": 22996100000000
+        },
+        {
+          "id": 187,
+          "name": "Uzbekistan",
+          "population": 34915100,
+          "square": 440650,
+          "GDP": 69238903106
+        },
+        {
+          "id": 188,
+          "name": "Vanuatu",
+          "population": 314464,
+          "square": 12190,
+          "GDP": 983469257
+        },
+        {
+          "id": 189,
+          "name": "Venezuela",
+          "population": 28704947,
+          "square": 882050
+        },
+        {
+          "id": 190,
+          "name": "Vietnam",
+          "population": 98168829,
+          "square": 313429,
+          "GDP": 362638000000
+        },
+        {
+          "id": 191,
+          "name": "Yemen",
+          "population": 30490639,
+          "square": 527970,
+          "GDP": 21061691630
+        },
+        {
+          "id": 192,
+          "name": "Zambia",
+          "population": 18920657,
+          "square": 743390,
+          "GDP": 21203059080
+        },
+        {
+          "id": 193,
+          "name": "Zimbabwe",
+          "population": 15092171,
+          "square": 386850,
+          "GDP": 26217726717
         }
       ]
-
-
-
     }
   ],
-
-
-
   "command packs": [
     {
       "command pack v1": [
@@ -45,7 +1367,8 @@
             "COMPARE [Country 1] [Unit 1]",
             "COMPARE [Great Britain] [Unit of Gas]",
             "COMPARE [Unit 1] [Unit 2]",
-            "COMPARE [Unit of Gas] [Ocean Unit]"]
+            "COMPARE [Unit of Gas] [Ocean Unit]"
+          ]
         },
         {
           "id": 2,
@@ -54,7 +1377,8 @@
           "description": "команда для создания союза",
           "examples": [
             "CREATE UNION [union_name] : [Country 1] [Country 2] [Country 3]",
-          "CREATE UNION [Ocean Unit] : [Singapore] [Malaysia] [Indonesia]"]
+            "CREATE UNION [Ocean Unit] : [Singapore] [Malaysia] [Indonesia]"
+          ]
         },
         {
           "id": 3,
@@ -63,7 +1387,8 @@
           "description": "команда для удаления союза",
           "examples": [
             "DELETE UNION [union_name]",
-            "DELETE UNION [Unit of Gas]"]
+            "DELETE UNION [Unit of Gas]"
+          ]
         },
         {
           "id": 4,
@@ -95,8 +1420,5 @@
         }
       ]
     }
-    ]
-
-
-
+  ]
 }

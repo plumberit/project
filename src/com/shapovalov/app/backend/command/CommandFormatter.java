@@ -5,6 +5,6 @@ import com.shapovalov.app.model.Command;
 public class CommandFormatter {
     Command format(String command) {
         char [] arr = command.toCharArray();
-        
+        return null;
     }
 }
