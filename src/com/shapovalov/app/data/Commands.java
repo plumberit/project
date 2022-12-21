@@ -1,10 +1,10 @@
 package com.shapovalov.app.data;
 
-import com.shapovalov.app.model.command.Command;
+import com.shapovalov.app.model.command.CommandReal;
 
 import java.util.ArrayList;
 
-public class Commands {
+public final class Commands {
 
-    public static ArrayList<Command> commands = new ArrayList<>();
+    public final static ArrayList<CommandReal> commands = new ArrayList<>();
 }

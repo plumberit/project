@@ -1362,11 +1362,11 @@
           "isParameter": true,
           "description": "команда для сравнения стран и союзов",
           "examples": [
-            "COMPARE [Country 1] [Country 2]",
+            "COMPARE [country_1] [country_2]",
             "COMPARE [Switzerland] [Turkey]",
-            "COMPARE [Country 1] [Unit 1]",
+            "COMPARE [country_1] [unit_1]",
             "COMPARE [Great Britain] [Unit of Gas]",
-            "COMPARE [Unit 1] [Unit 2]",
+            "COMPARE [unit_1] [unit_2]",
             "COMPARE [Unit of Gas] [Ocean Unit]"
           ]
         },
@@ -1392,30 +1392,23 @@
         },
         {
           "id": 4,
-          "command name": "SHOW COUNTRIES",
-          "isParameter": false,
-          "description": "команда для отображения всех стран",
+          "command name": "DETAIL",
+          "isParameter": true,
+          "description": "команда для отображения детальной информации о стране или союзе",
           "examples": [
-            "SHOW COUNTRIES"
+            "DETAIL [country_name]",
+            "DETAIL [Italy]",
+            "DETAIL [unit_name]",
+            "DETAIL [Unit of Gas]"
           ]
         },
         {
           "id": 5,
-          "command name": "SHOW UNITS",
+          "command name": "SHOW",
           "isParameter": false,
-          "description": "команда для отображения созданных союзов",
+          "description": "команда для отображения всех стран и созданных союзов",
           "examples": [
-            "SHOW UNITS"
-          ]
-        },
-        {
-          "id": 6,
-          "command name": "UNIT",
-          "isParameter": true,
-          "description": "команда для отображения стран внутри союза",
-          "examples": [
-            "UNIT [unit_name]",
-            "Unit [Unit of Gas]"
+            "SHOW"
           ]
         }
       ]

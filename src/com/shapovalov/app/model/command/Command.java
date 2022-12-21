@@ -5,6 +5,12 @@ public abstract class Command {
     private String commandName;
     private boolean isParameter;
 
+    public Command(int id, String commandName, boolean isParameter) {
+        this.id = id;
+        this.commandName = commandName;
+        this.isParameter = isParameter;
+    }
+
     public int getId() {
         return id;
     }

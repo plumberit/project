@@ -1,10 +1,13 @@
 package com.shapovalov.app.data.handler;
 
+import com.shapovalov.app.data.Commands;
 import com.shapovalov.app.data.Countries;
 import com.shapovalov.app.model.Country;
+import com.shapovalov.app.model.command.CommandReal;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 
 
@@ -14,10 +17,59 @@ public class CollectionInitializer {
 
         //stumb(JSONObject);
 
-        fill();
+        fillCountries();
+        fillCommands();
     }
 
-    private void fill() {
+
+    private void fillCommands() {
+        Commands.commands.add(new CommandReal(1, "COMPARE", true,
+                "команда для сравнения стран и союзов",
+                new ArrayList<>()));
+        Commands.commands.get(0).getExamples().add("COMPARE [Country 1] [Country 2]");
+        Commands.commands.get(0).getExamples().add("COMPARE [Switzerland] [Turkey]");
+        Commands.commands.get(0).getExamples().add("COMPARE [Country 1] [Unit 1]");
+        Commands.commands.get(0).getExamples().add("COMPARE [Great Britain] [Unit of Gas]");
+        Commands.commands.get(0).getExamples().add("COMPARE [Unit 1] [Unit 2]");
+        Commands.commands.get(0).getExamples().add("COMPARE [Unit of Gas] [Ocean Unit]");
+
+
+
+        Commands.commands.add(new CommandReal(2, "CREATE UNION", true,
+                "команда для создания союза",
+                new ArrayList<>()));
+        Commands.commands.get(1).getExamples().add("CREATE UNION [union_name] : [Country 1] [Country 2] [Country 3]");
+        Commands.commands.get(1).getExamples().add("CREATE UNION [Ocean Unit] : [Singapore] [Malaysia] [Indonesia]");
+
+
+
+        Commands.commands.add(new CommandReal(3, "DELETE UNION", true,
+                "команда для удаления союза",
+                new ArrayList<>()));
+        Commands.commands.get(2).getExamples().add("DELETE UNION [union_name]");
+        Commands.commands.get(2).getExamples().add("DELETE UNION [Unit of Gas]");
+
+
+
+
+        Commands.commands.add(new CommandReal(4, "DETAIL", true,
+                "команда для отображения детальной информации о стране или союзе",
+                new ArrayList<>()));
+        Commands.commands.get(3).getExamples().add("DETAIL [country_name]");
+        Commands.commands.get(3).getExamples().add("DETAIL [Italy]");
+        Commands.commands.get(3).getExamples().add("DETAIL [unit_name]");
+        Commands.commands.get(3).getExamples().add("DETAIL [Unit of Gas]");
+
+
+
+
+        Commands.commands.add(new CommandReal(5, "SHOW", false,
+                "команда для отображения всех стран и созданных союзов",
+                new ArrayList<>()));
+        Commands.commands.get(4).getExamples().add("SHOW");
+    }
+
+    private void fillCountries() {
 
         Countries.countries.add(	new Country(	1	,	"	Afghanistan	"	,	39835428	,	652230	,	20116137326L	));
         Countries.countries.add(	new Country(	2	,	"	Albania	"	,	2811666	,	27400	,	18260043500L	));
