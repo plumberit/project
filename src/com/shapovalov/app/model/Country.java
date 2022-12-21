@@ -1,20 +1,20 @@
 package com.shapovalov.app.model;
 
-public class Country {
+public final class Country {
 
-    public Country(int id, String name, long population, int square, long UDP) {
+    public Country(int id, String name, long population, int square, long GDP) {
         this.id = id;
         this.name = name;
         this.population = population;
         this.square = square;
-        this.UDP = UDP;
+        this.GDP = GDP;
     }
 
     private int id;
     private String name;
     private long population;
     private int square;
-    private long UDP;
+    private long GDP;
 
     public int getId() {
         return id;
@@ -32,8 +32,8 @@ public class Country {
         return square;
     }
 
-    public long getUDP() {
-        return UDP;
+    public long getGDP() {
+        return GDP;
     }
 
     public void setId(int id) {
@@ -48,7 +48,7 @@ public class Country {
     public void setSquare(int square) {
         this.square = square;
     }
-    public void setUDP(long UDP) {
-        this.UDP = UDP;
+    public void setGDP(long GDP) {
+        this.GDP = GDP;
     }
 }
