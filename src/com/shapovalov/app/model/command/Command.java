@@ -1,6 +1,6 @@
 package com.shapovalov.app.model.command;
 
-public class Command {
+public abstract class Command {
     private int id;
     private String commandName;
     private boolean isParameter;

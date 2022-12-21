@@ -4,8 +4,8 @@ import com.shapovalov.app.model.command.Command;
 
 public class CommandCenter {
 
-    public void handle(String command) {
+    public void handle(String inputRaw) {
         CommandFormatter commandFormatter = new CommandFormatter();
-        Command commandObj = commandFormatter.format(command);
+        Command command = commandFormatter.format(inputRaw);
     }
 }

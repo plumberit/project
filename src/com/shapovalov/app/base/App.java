@@ -8,7 +8,7 @@ public class App {
 
     public void run() {
         InitializeLayer initializeLayer = new InitializeLayer();
-        initializeLayer.run();
+        //initializeLayer.run();
         StartLayer startLayer = new StartLayer();
         startLayer.run();
         ProcessLayer processLayer = new ProcessLayer();
