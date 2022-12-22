@@ -15,24 +15,11 @@ public abstract class Command {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public String getCommandName() {
         return commandName;
     }
 
-    public void setCommandName(String commandName) {
-        this.commandName = commandName;
-    }
-
-
     public boolean isParameter() {
         return isParameter;
-    }
-
-    public void setParameter(boolean parameter) {
-        isParameter = parameter;
     }
 }

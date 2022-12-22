@@ -2,71 +2,84 @@ package com.shapovalov.app.backend.command;
 
 import com.shapovalov.app.data.Commands;
 import com.shapovalov.app.model.command.Command;
+import com.shapovalov.app.model.command.InputStructured;
 
 import java.util.ArrayList;
 
 public class CommandFormatter {
-    Command format(String inputRaw) {
-        //разбиение введенной команды на символы и помещение их в массив
-        char[] arr = inputRaw.toCharArray();
-        //количество символов в массиве - пригодится потом
-        int maxSize = arr.length;
 
-        //создание массива из названий команд
-        String[] commandNames = new String[Commands.commands.size()];
-        for (int i = 0; i < Commands.commands.size(); i++) {
-            commandNames[i] = Commands.commands.get(i).getCommandName();
+    InputStructured format(String inputRaw) {
+        //функция возвращает команду, если у введенной команды
+        //не было параметров
+        //и команда была валидна
+        Command input = isCommandHasParameter(inputRaw);
+        if (input != null) {
+            InputStructured inputStructured =
+                    new InputStructured(
+                            input.getId(),
+                            input.getCommandName(),
+                            input.isParameter(),
+                            null
+                    );
+            return inputStructured;
         }
-
-        //создание коллекции из массивов, которые хранят символы
-        //массив с символами - название команды, разбитое посимвольно
-        ArrayList<char[]> arraysWithSymbolsOfCommandNames = new ArrayList<>();
-        for (int i = 0; i < Commands.commands.size(); i++) {
-            arraysWithSymbolsOfCommandNames.add(commandNames[i].toCharArray());
-        }
-
-        //создание урезанной коллекции
-        //алгоритм предусматривает, что названия команд
-        //поочередно будут сравнивать (посимвольно) с командой, которую ввели
-        //но иногда введенная команда является более короткой
-        //чем команды существующие
-        //для этого нам надо обрезать названия команд
-        //до размера введенной команды
-        ArrayList<char[]> cut = new ArrayList<>();
-        //в этом цикле мы только декларируем размеры массивов
-        for (int i = 0; i < commandNames.length; i++) {
-            if (arraysWithSymbolsOfCommandNames.get(i).length > maxSize) {
-                cut.add(new char[maxSize]);
-            } else {
-                cut.add(new char[arraysWithSymbolsOfCommandNames.get(i).length]);
-            }
-        }
-        //а тут мы инициализируем эти массивы
-        for (int i = 0; i < cut.size(); i++) {
-            for (int j = 0; j < cut.get(i).length; j++) {
-                cut.get(i)[j] = arraysWithSymbolsOfCommandNames.get(i)[j];
-            }
-        }
-
-        //непосредственно сравнение команд с введенной
-        //команды, которые не прошли - помечаем в массиве названий команд - null
-        for (int i = 0; i < commandNames.length; i++) {
-            for (int j = 0; j < cut.get(i).length; j++) {
-                if (cut.get(i)[j] != arr[j]) {
-                    commandNames[i] = null;
+        //значит функция с параметрами (или не валидна)
+        else {
+            String [] arr = separateCommandAndParameter(inputRaw);
+            Command commandTemporary=null;
+            for(Command command : Commands.commands) {
+                if(command.getCommandName().equals(arr[0])) {
+                    commandTemporary = command;
                 }
             }
-        }
 
-        //перебираем массив названий команд
-        //если не null, то вывести команду на экран
-        for (int i = 0; i < commandNames.length; i++) {
-            if (commandNames[i]!=null) {
-                System.out.println(commandNames[i]);
+            InputStructured inputStructured =
+                    new InputStructured(
+                            commandTemporary.getId(),
+                            commandTemporary.getCommandName(),
+                            commandTemporary.isParameter(),
+                            new ArrayList<>()
+                    );
+
+            for (int i = 1; i < arr.length; i++) {
+                inputStructured.parameters.add(arr[i]);
+            }
+
+            return inputStructured;
+        }
+    }
+
+    private Command isCommandHasParameter(String inputRaw) {
+        for (Command command : Commands.commands) {
+            if (!command.isParameter() && inputRaw.equals(command.getCommandName())) {
+                return command;
+            }
+        }
+        return null;
+    }
+
+    private String[] separateCommandAndParameter(String inputRaw) {
+        //разбиение введенной команды на символы и помещение их в массив
+        int a=0;
+        char[] symbolsOfInput = inputRaw.toCharArray();
+        for (int i = 0; i <symbolsOfInput.length ; i++) {
+            if(symbolsOfInput[i]=='[') {
+                a = i;
+                break;
             }
         }
 
+        String command = inputRaw.substring(0, a-1);
+        String parameters = inputRaw.substring(a, symbolsOfInput.length);
 
-        return null;
+        String [] parametersArr = parameters.split(" ");
+        String [] specArr = new String[parameters.length()+1];
+        specArr[0] = command;
+        for (int i = 0; i < parametersArr.length; i++) {
+            specArr[i+1] = parametersArr[i];
+        }
+        return specArr;
     }
+
+
 }

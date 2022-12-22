@@ -1376,8 +1376,8 @@
           "isParameter": true,
           "description": "команда для создания союза",
           "examples": [
-            "CREATE UNION [union_name] : [Country 1] [Country 2] [Country 3]",
-            "CREATE UNION [Ocean Unit] : [Singapore] [Malaysia] [Indonesia]"
+            "CREATE UNION [union_name] [Country 1] [Country 2] [Country 3]",
+            "CREATE UNION [Ocean Unit] [Singapore] [Malaysia] [Indonesia]"
           ]
         },
         {

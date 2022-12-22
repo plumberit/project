@@ -2,9 +2,9 @@ package com.shapovalov.app.model.command;
 
 import java.util.ArrayList;
 
-public class CommandReal extends Command{
+public final class CommandReal extends Command{
     private String description;
-    private ArrayList<String> examples = new ArrayList<>();
+    private ArrayList<String> examples;
 
     public CommandReal(int id, String commandName, boolean isParameter, String description, ArrayList<String> examples) {
         super(id, commandName, isParameter);
@@ -12,11 +12,11 @@ public class CommandReal extends Command{
         this.examples = examples;
     }
 
-    public ArrayList<String> getExamples() {
-        return examples;
+    public String getDescription() {
+        return description;
     }
 
-    public void setExamples(ArrayList<String> examples) {
-        this.examples = examples;
+    public ArrayList<String> getExamples() {
+        return examples;
     }
 }
