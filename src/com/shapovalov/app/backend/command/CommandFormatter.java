@@ -2,83 +2,151 @@ package com.shapovalov.app.backend.command;
 
 import com.shapovalov.app.data.Commands;
 import com.shapovalov.app.model.command.Command;
-import com.shapovalov.app.model.command.InputStructured;
+import com.shapovalov.app.model.command.CommandInputStructured;
+import jdk.swing.interop.SwingInterOpUtils;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class CommandFormatter {
 
-    InputStructured format(String inputRaw) {
-        //функция возвращает команду, если у введенной команды
-        //не было параметров
-        //и команда была валидна
-        Command input = isCommandHasParameter(inputRaw);
-        if (input != null) {
-            InputStructured inputStructured =
-                    new InputStructured(
-                            input.getId(),
-                            input.getCommandName(),
-                            input.isParameter(),
-                            null
-                    );
-            return inputStructured;
+    public enum CommandFormatterState {
+        SUCCESS,
+        COMMAND_NOT_EXIST_ERROR,
+        COMMAND_HAS_PARAMETERS_ERROR,
+        COMMAND_HAS_NOT_PARAMETERS_ERROR
+    }
+
+    static CommandFormatterState status;
+
+    CommandInputStructured format(String commandInputRaw) {
+        boolean hasParameter =
+                hasParameter(commandInputRaw);
+        CommandInputStructuredDemo demo =
+                rawToStructured(commandInputRaw, hasParameter);
+        if (!isCommandExist(demo)) {
+            status = CommandFormatterState.COMMAND_NOT_EXIST_ERROR;
+            return null;
         }
-        //значит функция с параметрами (или не валидна)
-        else {
-            String [] arr = separateCommandAndParameter(inputRaw);
-            Command commandTemporary=null;
-            for(Command command : Commands.commands) {
-                if(command.getCommandName().equals(arr[0])) {
-                    commandTemporary = command;
-                }
+        if(!hasParameter && !getParameterStatus(demo)) {
+            status = CommandFormatterState.COMMAND_HAS_PARAMETERS_ERROR;
+            return null;
+        }
+        if(hasParameter && !getParameterStatus(demo)) {
+            status = CommandFormatterState.COMMAND_HAS_NOT_PARAMETERS_ERROR;
+            return null;
+        }
+
+        return createStructured(demo);
+
+    }
+
+
+    private boolean hasParameter(String commandInputRaw) {
+        //заменить на более краткий String метод
+        char[] symbolsOfInput = commandInputRaw.toCharArray();
+        for (int i = 0; i < symbolsOfInput.length; i++) {
+            if (symbolsOfInput[i] == '[') {
+                return true;
             }
+        }
+        return false;
+    }
 
-            InputStructured inputStructured =
-                    new InputStructured(
-                            commandTemporary.getId(),
-                            commandTemporary.getCommandName(),
-                            commandTemporary.isParameter(),
-                            new ArrayList<>()
-                    );
-
-            for (int i = 1; i < arr.length; i++) {
-                inputStructured.parameters.add(arr[i]);
-            }
-
-            return inputStructured;
+    private CommandInputStructuredDemo rawToStructured
+            (String commandInputRaw, boolean hasParameter) {
+        if (!hasParameter) {
+            return noParameterHandle(commandInputRaw);
+        } else {
+            return yesParameterHandle(commandInputRaw);
         }
     }
 
-    private Command isCommandHasParameter(String inputRaw) {
-        for (Command command : Commands.commands) {
-            if (!command.isParameter() && inputRaw.equals(command.getCommandName())) {
-                return command;
-            }
-        }
-        return null;
+    private CommandInputStructuredDemo noParameterHandle(String commandInputRaw) {
+        String commandInputName = commandInputRaw;
+
+        CommandInputStructuredDemo commandInputStructuredDemo =
+                new CommandInputStructuredDemo();
+        commandInputStructuredDemo.commandInputName = commandInputName;
+        commandInputStructuredDemo.parameters = null;
+        commandInputStructuredDemo.hasParameter = false;
+        return commandInputStructuredDemo;
     }
 
-    private String[] separateCommandAndParameter(String inputRaw) {
+    private CommandInputStructuredDemo yesParameterHandle(String commandInputRaw) {
         //разбиение введенной команды на символы и помещение их в массив
-        int a=0;
-        char[] symbolsOfInput = inputRaw.toCharArray();
-        for (int i = 0; i <symbolsOfInput.length ; i++) {
-            if(symbolsOfInput[i]=='[') {
-                a = i;
+        int indexSeparator = 0;
+        char[] symbolsOfInput = commandInputRaw.toCharArray();
+        for (int i = 0; i < symbolsOfInput.length; i++) {
+            if (symbolsOfInput[i] == '[') {
+                indexSeparator = i;
                 break;
             }
         }
 
-        String command = inputRaw.substring(0, a-1);
-        String parameters = inputRaw.substring(a, symbolsOfInput.length);
+        String commandInputName = commandInputRaw.substring(0, indexSeparator - 1);
+        String parameters = commandInputRaw.substring(indexSeparator, symbolsOfInput.length);
 
-        String [] parametersArr = parameters.split(" ");
-        String [] specArr = new String[parameters.length()+1];
-        specArr[0] = command;
-        for (int i = 0; i < parametersArr.length; i++) {
-            specArr[i+1] = parametersArr[i];
+        String[] parametersArr = parameters.split(" ");
+        ArrayList<String> parametersList = new ArrayList<>(Arrays.asList(parametersArr));
+
+        CommandInputStructuredDemo commandInputStructuredDemo =
+                new CommandInputStructuredDemo();
+        commandInputStructuredDemo.commandInputName = commandInputName;
+        commandInputStructuredDemo.parameters = parametersList;
+        commandInputStructuredDemo.hasParameter = true;
+        return commandInputStructuredDemo;
+    }
+
+    private CommandInputStructured createStructured
+            (CommandInputStructuredDemo demo) {
+        Command command = null;
+        for (int i = 0; i < Commands.commands.size(); i++) {
+            if(demo.commandInputName.equals(Commands.commands.get(i).getCommandName())) {
+                command = Commands.commands.get(i);
+            }
         }
-        return specArr;
+            CommandInputStructured commandInputStructured =
+                    new CommandInputStructured(
+                            command.getId(),
+                            command.getCommandName(),
+                            command.isParameter(),
+                            null
+                    );
+            return commandInputStructured;
+
+    }
+
+
+    private boolean isCommandExist(CommandInputStructuredDemo demo) {
+        for (Command command : Commands.commands) {
+            if (demo.commandInputName.equals(command.getCommandName())) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private boolean getParameterStatus(CommandInputStructuredDemo demo) {
+        for (Command command : Commands.commands) {
+            if (!demo.hasParameter && !command.isParameter()
+                    && demo.commandInputName.equals(command.getCommandName())) {
+                return true;
+            }
+            if (demo.hasParameter && command.isParameter()
+                    && demo.commandInputName.equals(command.getCommandName())) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+
+
+    private static class CommandInputStructuredDemo {
+        private String commandInputName;
+        private ArrayList<String> parameters;
+        private boolean hasParameter;
     }
 
 
