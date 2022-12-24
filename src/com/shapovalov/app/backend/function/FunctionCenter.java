@@ -1,4 +1,4 @@
-package com.shapovalov.app.backend.command;
+package com.shapovalov.app.backend.function;
 
 import com.shapovalov.app.model.functional.entities.FunctionCall;
 
@@ -12,7 +12,7 @@ public class FunctionCenter {
         if(isExist) {
 
         } else {
-            
+
         }
     }
 }

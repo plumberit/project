@@ -1,6 +1,6 @@
 package com.shapovalov.app.base.layers.logic;
 
-import com.shapovalov.app.backend.command.FunctionCenter;
+import com.shapovalov.app.backend.function.FunctionCenter;
 import com.shapovalov.app.view.View;
 
 public class AppCycleProcess {

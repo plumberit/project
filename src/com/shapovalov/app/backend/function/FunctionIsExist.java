@@ -1,4 +1,4 @@
-package com.shapovalov.app.backend.command;
+package com.shapovalov.app.backend.function;
 
 import com.shapovalov.app.data.Commands;
 import com.shapovalov.app.model.functional.entities.Function;
