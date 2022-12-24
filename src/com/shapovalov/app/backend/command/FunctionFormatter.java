@@ -13,7 +13,7 @@ import java.util.Arrays;
  * в этом классе НЕ стоит задача связать полученный объект с настоящей командой
  * */
 
-public class CommandFormatter {
+public class FunctionFormatter {
 
     FunctionCall format(String inputRaw) {
         FunctionCall struct;
