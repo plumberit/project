@@ -59,7 +59,8 @@ public class CommandIsExist {
             if (
                     command.getFunctionName()
                             .equals(struct.getFunctionName())
-            && command.getParameters()==null) {
+            //&& command.getParameters()==null
+            ) {
                 return true;
             }
         }
@@ -71,7 +72,8 @@ public class CommandIsExist {
             if (
                     command.getFunctionName()
                             .equals(struct.getFunctionName())
-                            && command.getParameters()!=null) {
+                            //&& command.getParameters()!=null
+            ) {
                 return true;
             }
         }

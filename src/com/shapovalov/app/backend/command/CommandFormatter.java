@@ -18,7 +18,7 @@ public class CommandFormatter {
     FunctionCall format(String inputRaw) {
         FunctionCall struct;
 
-        //сделать "убиратель" пробелов
+        inputRaw = deleteExtraSpaces(inputRaw);
 
         boolean hasParameter = hasParameter(inputRaw);
         struct = rawToStructured(inputRaw, hasParameter);
@@ -47,7 +47,7 @@ public class CommandFormatter {
     }
 
     private FunctionCall noParameterHandle(String inputRaw) {
-        String functionName = spaceDeleter(inputRaw);
+        String functionName = deleteAroundSpaces(inputRaw);
 
         FunctionCall struct = new FunctionCall();
         struct.setFunctionName(functionName);
@@ -57,20 +57,12 @@ public class CommandFormatter {
 
     private FunctionCall yesParameterHandle(String inputRaw) {
         //разбиение введенной команды на символы и помещение их в массив
-        int indexSeparator = 0;
-        char[] symbolsOfInput = inputRaw.toCharArray();
-        for (int i = 0; i < symbolsOfInput.length; i++) {
-            if (symbolsOfInput[i] == '[') {
-                indexSeparator = i;
-                break;
-            }
-        }
+        int indexSeparator = inputRaw.indexOf('[');
 
-        String commandInputName = inputRaw.substring(0, indexSeparator - 1);
-        String parameters = inputRaw.substring(indexSeparator, symbolsOfInput.length);
+        String commandInputName = inputRaw.substring(0, indexSeparator);
+        String parameters = inputRaw.substring(indexSeparator);
 
-        String[] parametersArr = parameters.split(" ");
-        ArrayList<String> parametersList = new ArrayList<>(Arrays.asList(parametersArr));
+        ArrayList <String> parametersList = parametersHandle(parameters);
 
         FunctionCall struct = new FunctionCall();
         struct.setFunctionName(commandInputName);
@@ -79,20 +71,37 @@ public class CommandFormatter {
     }
 
 
-    private String spaceDeleter(String inputRaw) {
-        String [] extraSpaces = {"  ", "   ", "    ", "     "};
-        String inputClear = inputRaw;
-        for (String i : extraSpaces) {
-            inputClear = inputRaw.replace(i, "");
-        }
+    private String deleteAroundSpaces(String stroke) {
 
-        if(inputClear.charAt(0)==' ') {
-            inputClear = inputClear.substring(1);
+        //удаление пробелов в первом и последнем символе
+        if(stroke.charAt(0)==' ') {
+            stroke = stroke.substring(1);
         }
-        if(inputClear.charAt(inputClear.length()-1)==' ') {
-            inputClear = inputClear.substring(0, inputClear.length()-1);
+        if(stroke.charAt(stroke.length()-1)==' ') {
+            stroke = stroke.substring(0, stroke.length()-1);
         }
-        return inputClear;
+        return stroke;
+    }
+
+    private String deleteExtraSpaces(String stroke) {
+        //удаление лишних пробелов
+        String space = " ";
+        String doubleSpace = "  ";
+        while (stroke.contains(doubleSpace)) {
+            stroke = stroke.replace(doubleSpace, space);
+        }
+        return stroke;
+    }
+
+    private ArrayList<String> parametersHandle(String parameters) {
+        ArrayList<String> params = new ArrayList<>();
+        while (parameters.contains("[")||parameters.contains("]")) {
+            int firstCrap = parameters.indexOf('[');
+            int secondCrap = parameters.indexOf(']');
+            params.add(parameters.substring(firstCrap+1, secondCrap));
+            parameters = parameters.substring(secondCrap+1);
+        }
+        return params;
     }
 
 }

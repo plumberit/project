@@ -14,7 +14,7 @@ public class CommandBuilder {
                 break;
             }
         }
-        CommandInput input = new CommandInput();
-        input.id = command.getId();
+        //CommandInput input = new CommandInput();
+        //input.id = command.getId();
     }
 }
