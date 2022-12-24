@@ -59,13 +59,14 @@ public class CommandFormatter {
         //разбиение введенной команды на символы и помещение их в массив
         int indexSeparator = inputRaw.indexOf('[');
 
-        String commandInputName = inputRaw.substring(0, indexSeparator);
+        String functionName = inputRaw.substring(0, indexSeparator);
+        functionName = deleteAroundSpaces(functionName);
         String parameters = inputRaw.substring(indexSeparator);
 
         ArrayList <String> parametersList = parametersHandle(parameters);
 
         FunctionCall struct = new FunctionCall();
-        struct.setFunctionName(commandInputName);
+        struct.setFunctionName(functionName);
         struct.setParameters(parametersList);
         return struct;
     }
@@ -101,7 +102,11 @@ public class CommandFormatter {
             params.add(parameters.substring(firstCrap+1, secondCrap));
             parameters = parameters.substring(secondCrap+1);
         }
-        return params;
+        ArrayList<String> paramsNew = new ArrayList<>();
+        for (int i = 0; i <params.size(); i++) {
+            paramsNew.add(deleteAroundSpaces(params.get(i)));
+        }
+        return paramsNew;
     }
 
 }
