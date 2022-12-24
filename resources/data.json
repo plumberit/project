@@ -1357,7 +1357,6 @@
     {
       "command pack v1": [
         {
-          "id": 1,
           "command name": "COMPARE",
           "isParameter": true,
           "description": "команда для сравнения стран и союзов",
@@ -1371,7 +1370,6 @@
           ]
         },
         {
-          "id": 2,
           "command name": "CREATE UNION",
           "isParameter": true,
           "description": "команда для создания союза",
@@ -1381,7 +1379,6 @@
           ]
         },
         {
-          "id": 3,
           "command name": "DELETE UNION",
           "isParameter": true,
           "description": "команда для удаления союза",
@@ -1391,7 +1388,6 @@
           ]
         },
         {
-          "id": 4,
           "command name": "DETAIL",
           "isParameter": true,
           "description": "команда для отображения детальной информации о стране или союзе",
@@ -1403,7 +1399,6 @@
           ]
         },
         {
-          "id": 5,
           "command name": "SHOW",
           "isParameter": false,
           "description": "команда для отображения всех стран и созданных союзов",

@@ -3,7 +3,7 @@ package com.shapovalov.app.data.handler;
 import com.shapovalov.app.data.Commands;
 import com.shapovalov.app.data.Countries;
 import com.shapovalov.app.model.Country;
-import com.shapovalov.app.model.command.CommandApp;
+import com.shapovalov.app.model.functional.entities.Function;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
@@ -23,7 +23,7 @@ public class CollectionInitializer {
 
 
     private void fillCommands() {
-        Commands.commands.add(new CommandApp(1, "COMPARE", true,
+        Commands.commands.add(new Function("COMPARE", true,
                 "команда для сравнения стран и союзов",
                 new ArrayList<>()));
         Commands.commands.get(0).getExamples().add("COMPARE [Country 1] [Country 2]");
@@ -35,7 +35,7 @@ public class CollectionInitializer {
 
 
 
-        Commands.commands.add(new CommandApp(2, "CREATE UNION", true,
+        Commands.commands.add(new Function( "CREATE UNION", true,
                 "команда для создания союза",
                 new ArrayList<>()));
         Commands.commands.get(1).getExamples().add("CREATE UNION [union_name] [Country 1] [Country 2] [Country 3]");
@@ -43,7 +43,7 @@ public class CollectionInitializer {
 
 
 
-        Commands.commands.add(new CommandApp(3, "DELETE UNION", true,
+        Commands.commands.add(new Function( "DELETE UNION", true,
                 "команда для удаления союза",
                 new ArrayList<>()));
         Commands.commands.get(2).getExamples().add("DELETE UNION [union_name]");
@@ -52,7 +52,7 @@ public class CollectionInitializer {
 
 
 
-        Commands.commands.add(new CommandApp(4, "DETAIL", true,
+        Commands.commands.add(new Function( "DETAIL", true,
                 "команда для отображения детальной информации о стране или союзе",
                 new ArrayList<>()));
         Commands.commands.get(3).getExamples().add("DETAIL [country_name]");
@@ -63,7 +63,7 @@ public class CollectionInitializer {
 
 
 
-        Commands.commands.add(new CommandApp(5, "SHOW", false,
+        Commands.commands.add(new Function( "SHOW", false,
                 "команда для отображения всех стран и созданных союзов",
                 new ArrayList<>()));
         Commands.commands.get(4).getExamples().add("SHOW");

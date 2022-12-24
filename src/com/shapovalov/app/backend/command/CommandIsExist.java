@@ -1,8 +1,8 @@
 package com.shapovalov.app.backend.command;
 
 import com.shapovalov.app.data.Commands;
-import com.shapovalov.app.model.command.CommandApp;
-import com.shapovalov.app.model.command.CommandStructure;
+import com.shapovalov.app.model.functional.entities.Function;
+import com.shapovalov.app.model.functional.entities.FunctionCall;
 
 public class CommandIsExist {
 
@@ -13,7 +13,7 @@ public class CommandIsExist {
         PARAMETER_NOT_REQUIRED
     }
 
-    Status validate(CommandStructure struct) {
+    Status validate(FunctionCall struct) {
         //проверка существует ли введенный
         //COMMAND_NAME в базе
         if(!isCommandExist(struct)) {
@@ -34,7 +34,7 @@ public class CommandIsExist {
         return Status.EXIST;
     }
 
-    private boolean hasParameter(CommandStructure struct) {
+    private boolean hasParameter(FunctionCall struct) {
         boolean hasParameter;
         if(struct.getParameters()==null) {
             hasParameter = false;
@@ -44,21 +44,21 @@ public class CommandIsExist {
         return hasParameter;
     }
 
-    private boolean isCommandExist(CommandStructure struct) {
-        for (CommandApp command : Commands.commands) {
-            if (command.getCommandName().
-                    equals(struct.getCommandName())) {
+    private boolean isCommandExist(FunctionCall struct) {
+        for (Function command : Commands.commands) {
+            if (command.getFunctionName().
+                    equals(struct.getFunctionName())) {
                 return true;
             }
         }
         return false;
     }
 
-    private boolean noParameter(CommandStructure struct) {
-        for (CommandApp command : Commands.commands) {
+    private boolean noParameter(FunctionCall struct) {
+        for (Function command : Commands.commands) {
             if (
-                    command.getCommandName()
-                            .equals(struct.getCommandName())
+                    command.getFunctionName()
+                            .equals(struct.getFunctionName())
             && command.getParameters()==null) {
                 return true;
             }
@@ -66,11 +66,11 @@ public class CommandIsExist {
         return false;
     }
 
-    private boolean yesParameter(CommandStructure struct) {
-        for (CommandApp command : Commands.commands) {
+    private boolean yesParameter(FunctionCall struct) {
+        for (Function command : Commands.commands) {
             if (
-                    command.getCommandName()
-                            .equals(struct.getCommandName())
+                    command.getFunctionName()
+                            .equals(struct.getFunctionName())
                             && command.getParameters()!=null) {
                 return true;
             }

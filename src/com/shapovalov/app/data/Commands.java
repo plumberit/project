@@ -1,10 +1,10 @@
 package com.shapovalov.app.data;
 
-import com.shapovalov.app.model.command.CommandApp;
+import com.shapovalov.app.model.functional.entities.Function;
 
 import java.util.ArrayList;
 
 public final class Commands {
 
-    public final static ArrayList<CommandApp> commands = new ArrayList<>();
+    public final static ArrayList<Function> commands = new ArrayList<>();
 }
