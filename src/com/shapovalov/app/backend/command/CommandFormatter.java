@@ -1,25 +1,28 @@
 package com.shapovalov.app.backend.command;
 
-import com.shapovalov.app.model.command.CommandStructure;
+import com.shapovalov.app.model.functional.entities.FunctionCall;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
 /*
-* Задача класса заклюачается в следующем
-* превратить "сырой" инпут
-* в чётко структурируемый объект
-* котором можно отдельно обратиться к названию команды или к отдельному параметру
-* в этом классе НЕ стоит задача связать полученный объект с настоящей командой
-* */
+ * Задача класса заклюачается в следующем
+ * превратить "сырой" инпут
+ * в чётко структурируемый объект
+ * котором можно отдельно обратиться к названию команды или к отдельному параметру
+ * в этом классе НЕ стоит задача связать полученный объект с настоящей командой
+ * */
 
 public class CommandFormatter {
 
-    CommandStructure format(String commandInputRaw) {
-        CommandStructure struct;
-        boolean hasParameter = hasParameter(commandInputRaw);
-         struct = rawToStructured(commandInputRaw, hasParameter);
-         return struct;
+    FunctionCall format(String inputRaw) {
+        FunctionCall struct;
+
+        //сделать "убиратель" пробелов
+
+        boolean hasParameter = hasParameter(inputRaw);
+        struct = rawToStructured(inputRaw, hasParameter);
+        return struct;
     }
 
 
@@ -34,28 +37,28 @@ public class CommandFormatter {
         return false;
     }
 
-    private CommandStructure rawToStructured
-            (String commandInputRaw, boolean hasParameter) {
+    private FunctionCall rawToStructured
+            (String inputRaw, boolean hasParameter) {
         if (!hasParameter) {
-            return noParameterHandle(commandInputRaw);
+            return noParameterHandle(inputRaw);
         } else {
-            return yesParameterHandle(commandInputRaw);
+            return yesParameterHandle(inputRaw);
         }
     }
 
-    private CommandStructure noParameterHandle(String commandInputRaw) {
-        String commandInputName = commandInputRaw;
+    private FunctionCall noParameterHandle(String inputRaw) {
+        String functionName = spaceDeleter(inputRaw);
 
-        CommandStructure struct = new CommandStructure();
-        struct.setCommandName(commandInputName);
+        FunctionCall struct = new FunctionCall();
+        struct.setFunctionName(functionName);
         struct.setParameters(null);
         return struct;
     }
 
-    private CommandStructure yesParameterHandle(String commandInputRaw) {
+    private FunctionCall yesParameterHandle(String inputRaw) {
         //разбиение введенной команды на символы и помещение их в массив
         int indexSeparator = 0;
-        char[] symbolsOfInput = commandInputRaw.toCharArray();
+        char[] symbolsOfInput = inputRaw.toCharArray();
         for (int i = 0; i < symbolsOfInput.length; i++) {
             if (symbolsOfInput[i] == '[') {
                 indexSeparator = i;
@@ -63,16 +66,33 @@ public class CommandFormatter {
             }
         }
 
-        String commandInputName = commandInputRaw.substring(0, indexSeparator - 1);
-        String parameters = commandInputRaw.substring(indexSeparator, symbolsOfInput.length);
+        String commandInputName = inputRaw.substring(0, indexSeparator - 1);
+        String parameters = inputRaw.substring(indexSeparator, symbolsOfInput.length);
 
         String[] parametersArr = parameters.split(" ");
         ArrayList<String> parametersList = new ArrayList<>(Arrays.asList(parametersArr));
 
-        CommandStructure struct = new CommandStructure();
-        struct.setCommandName(commandInputName);
+        FunctionCall struct = new FunctionCall();
+        struct.setFunctionName(commandInputName);
         struct.setParameters(parametersList);
         return struct;
+    }
+
+
+    private String spaceDeleter(String inputRaw) {
+        String [] extraSpaces = {"  ", "   ", "    ", "     "};
+        String inputClear = inputRaw;
+        for (String i : extraSpaces) {
+            inputClear = inputRaw.replace(i, "");
+        }
+
+        if(inputClear.charAt(0)==' ') {
+            inputClear = inputClear.substring(1);
+        }
+        if(inputClear.charAt(inputClear.length()-1)==' ') {
+            inputClear = inputClear.substring(0, inputClear.length()-1);
+        }
+        return inputClear;
     }
 
 }
