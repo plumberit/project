@@ -85,7 +85,6 @@ public class ReadableNum {
         for (int i = 0; i < fullPacksNum; i++) {
             finalResult = finalResult.concat(fullPacks[i]);
         }
-        System.out.println(finalResult);
         return finalResult;
     }
 }

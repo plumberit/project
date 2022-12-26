@@ -11,13 +11,13 @@ public class CountryDemonstrate {
         ReadableNum obj = new ReadableNum();
 
         result.getStrokes().add(
-                obj.toReadableNum(String.valueOf(country.getPopulation()))
+                "Population: " + obj.toReadableNum(String.valueOf(country.getPopulation()))
         );
         result.getStrokes().add(
-                obj.toReadableNum(String.valueOf(country.getSquare()))
+                "Square: " + obj.toReadableNum(String.valueOf(country.getSquare())) + " km^2"
         );
         result.getStrokes().add(
-                obj.toReadableNum(String.valueOf(country.getGDP()))
+                "GDP: " + obj.toReadableNum(String.valueOf(country.getGDP())) + "$"
         );
         return result;
     }
