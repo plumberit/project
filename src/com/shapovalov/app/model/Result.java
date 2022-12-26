@@ -10,10 +10,6 @@ public class Result {
         return strokes;
     }
 
-    public void setStrokes(ArrayList<String> strokes) {
-        this.strokes = strokes;
-    }
-
     public boolean isError() {
         return error;
     }
