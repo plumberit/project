@@ -11,7 +11,8 @@ import java.util.Iterator;
 public class CountriesInitializer {
 
     public void initialize(JSONObject JSONObject) {
-        JSONArray arr = (JSONArray) JSONObject.get("countries 2020");
+
+        JSONArray arr = (JSONArray) JSONObject.get("country packs");
 
         Iterator<JSONObject> iterator = arr.iterator();
         while (iterator.hasNext()) {

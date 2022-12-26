@@ -4,16 +4,9 @@ import com.shapovalov.app.data.Commands;
 import com.shapovalov.app.model.functional.entities.Function;
 import com.shapovalov.app.model.functional.entities.FunctionCall;
 
-public class FunctionIsExist {
+public class FunctionDistributor {
 
-    boolean validate(FunctionCall struct) {
-        if(!isCommandExist(struct)) {
-            return false;
-        }
-        return true;
-    }
-
-    private boolean isCommandExist(FunctionCall struct) {
+    public boolean isExist(FunctionCall struct) {
         for (Function command : Commands.commands) {
             if (command.getFunctionName().
                     equals(struct.getFunctionName())) {
@@ -21,5 +14,9 @@ public class FunctionIsExist {
             }
         }
         return false;
+    }
+
+    public void distributor() {
+
     }
 }
