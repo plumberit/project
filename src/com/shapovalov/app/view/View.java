@@ -1,5 +1,6 @@
 package com.shapovalov.app.view;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class View {
@@ -18,5 +19,11 @@ public class View {
     public String getInput() {
         Scanner scan = new Scanner(System.in);
         return scan.nextLine();
+    }
+
+    public void showResult(ArrayList<String> list) {
+        for(String stroke : list) {
+            System.out.println(stroke);
+        }
     }
 }
