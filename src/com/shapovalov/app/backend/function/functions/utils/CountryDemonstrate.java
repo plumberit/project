@@ -1,24 +1,25 @@
 package com.shapovalov.app.backend.function.functions.utils;
 
 import com.shapovalov.app.model.Country;
-import com.shapovalov.app.model.Result;
+
+import java.util.ArrayList;
 
 public class CountryDemonstrate {
-    public Result format(Country country) {
-        Result result = new Result();
-        result.getStrokes().add(country.getName());
+    public ArrayList<String> format(Country country) {
+        ArrayList<String> list = new ArrayList<>();
+        list.add(country.getName());
 
         ReadableNum obj = new ReadableNum();
 
-        result.getStrokes().add(
+        list.add(
                 "Population: " + obj.toReadableNum(String.valueOf(country.getPopulation()))
         );
-        result.getStrokes().add(
+        list.add(
                 "Square: " + obj.toReadableNum(String.valueOf(country.getSquare())) + " km^2"
         );
-        result.getStrokes().add(
+        list.add(
                 "GDP: " + obj.toReadableNum(String.valueOf(country.getGDP())) + "$"
         );
-        return result;
+        return list;
     }
 }
