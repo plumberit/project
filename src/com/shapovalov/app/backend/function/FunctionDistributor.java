@@ -1,6 +1,8 @@
 package com.shapovalov.app.backend.function;
 
 import com.shapovalov.app.backend.function.functions.FunctionCompare;
+import com.shapovalov.app.backend.function.functions.FunctionDetail;
+import com.shapovalov.app.backend.function.functions.FunctionShow;
 import com.shapovalov.app.data.Commands;
 import com.shapovalov.app.model.Result;
 import com.shapovalov.app.model.functional.entities.Function;
@@ -26,12 +28,12 @@ public class FunctionDistributor {
             return func.handle(parameters);
         }
         if(functionName.equals(Commands.commands.get(3).getFunctionName())) {
-            FunctionCompare func = new FunctionCompare();
+            FunctionDetail func = new FunctionDetail();
             return func.handle(parameters);
         }
         if(functionName.equals(Commands.commands.get(4).getFunctionName())) {
-            FunctionCompare func = new FunctionCompare();
-            return func.handle(parameters);
+            FunctionShow func = new FunctionShow();
+            return func.handle();
         }
         Result result = new Result();
         result.getStrokes().add("Function does not exist.");
