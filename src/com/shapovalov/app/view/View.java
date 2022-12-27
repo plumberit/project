@@ -25,5 +25,7 @@ public class View {
         for(String stroke : list) {
             System.out.println(stroke);
         }
+        System.out.println();
+        System.out.println();
     }
 }

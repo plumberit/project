@@ -68,11 +68,11 @@ public class FunctionCompare implements FunctionLogic {
 
         float squareDivision =
                 (float) country1.getSquare() / country2.getSquare();
-        CompareStatus squareStatus = exp(populationDivision);
+        CompareStatus squareStatus = exp(squareDivision);
 
         float GDPDivision =
                 (float) country1.getGDP() / country2.getGDP();
-        CompareStatus GDPStatus = exp(populationDivision);
+        CompareStatus GDPStatus = exp(GDPDivision);
 
 
         ArrayList<String> strokes = new ArrayList<>();
@@ -97,29 +97,33 @@ public class FunctionCompare implements FunctionLogic {
             isBigger = true;
         }
 
-        float difference = 0;
+        float difference = division;
+        byte percent = 0;
         if(!isBigger) {
             difference = (float) 1 / division;
+            percent = (byte) ( 100 / difference);
         }
-        CompareStatus status = new CompareStatus(isBigger, difference);
+        CompareStatus status = new CompareStatus(isBigger, difference, percent);
         return status;
     }
 
 
-    
+
     private class CompareStatus {
         final String [] relations = {"smaller", "bigger"};
-        private final String relation;
-        boolean isBigger;
-        float difference;
+        final String relation;
+        final boolean isBigger;
+        final String difference;
 
-        CompareStatus(boolean isBigger, float difference) {
+        CompareStatus(boolean isBigger, float difference, byte percent) {
             this.isBigger = isBigger;
-            this.difference = difference;
             if (!isBigger) {
                 relation = relations[0];
+                this.difference = String.format("%.2f",difference)
+                + " (" + String.valueOf(percent) + "%)";
             } else {
                 relation = relations[1];
+                this.difference = String.format("%.2f",difference);
             }
         }
     }
