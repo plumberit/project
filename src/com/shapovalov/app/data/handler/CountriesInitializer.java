@@ -5,18 +5,14 @@ import com.shapovalov.app.model.Country;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
-import java.util.Iterator;
-
-
 public class CountriesInitializer {
 
-    public void initialize(JSONObject JSONObject) {
-        JSONObject countryPacks = (JSONObject) JSONObject.get("country packs");
+    public void initialize(JSONObject obj) {
+        JSONObject countryPacks = (JSONObject) obj.get("country packs");
         JSONArray countries = (JSONArray) countryPacks.get("countries v1");
 
-        Iterator<JSONObject> iterator = countries.iterator();
-        while (iterator.hasNext()) {
-            JSONObject object = iterator.next();
+        for (Object country : countries) {
+            JSONObject object = (JSONObject) country;
             Countries.countries.add(new Country(
                     ((Long) object.get("id")).intValue(),
                     (String) object.get("name"),

@@ -1356,10 +1356,10 @@
   },
 
 
-  "command packs": {
-    "command pack v1": [
+  "function packs": {
+    "functions v1": [
       {
-        "command name": "COMPARE",
+        "name": "COMPARE",
         "description": "команда для сравнения стран и союзов",
         "examples": [
           "COMPARE [country_1] [country_2]",
@@ -1371,7 +1371,7 @@
         ]
       },
       {
-        "command name": "CREATE UNION",
+        "name": "CREATE UNION",
         "description": "команда для создания союза",
         "examples": [
           "CREATE UNION [union_name] [Country 1] [Country 2] [Country 3]",
@@ -1379,7 +1379,7 @@
         ]
       },
       {
-        "command name": "DELETE UNION",
+        "name": "DELETE UNION",
         "description": "команда для удаления союза",
         "examples": [
           "DELETE UNION [union_name]",
@@ -1387,7 +1387,7 @@
         ]
       },
       {
-        "command name": "DETAIL",
+        "name": "DETAIL",
         "description": "команда для отображения детальной информации о стране или союзе",
         "examples": [
           "DETAIL [country_name]",
@@ -1397,7 +1397,7 @@
         ]
       },
       {
-        "command name": "SHOW",
+        "name": "SHOW",
         "description": "команда для отображения всех стран и созданных союзов",
         "examples": [
           "SHOW"
