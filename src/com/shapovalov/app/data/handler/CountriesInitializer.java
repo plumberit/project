@@ -11,21 +11,19 @@ import java.util.Iterator;
 public class CountriesInitializer {
 
     public void initialize(JSONObject JSONObject) {
+        JSONObject countryPacks = (JSONObject) JSONObject.get("country packs");
+        JSONArray countries = (JSONArray) countryPacks.get("countries v1");
 
-        JSONArray arr = (JSONArray) JSONObject.get("country packs");
-
-        Iterator<JSONObject> iterator = arr.iterator();
+        Iterator<JSONObject> iterator = countries.iterator();
         while (iterator.hasNext()) {
             JSONObject object = iterator.next();
-
             Countries.countries.add(new Country(
-                    (int) object.get("id"),
+                    ((Long) object.get("id")).intValue(),
                     (String) object.get("name"),
                     (long) object.get("population"),
-                    (int) object.get("square"),
-                    (long) object.get("udp")
+                    ((Long) object.get("square")).intValue(),
+                    (long) object.get("GDP")
             ));
-
         }
     }
 
