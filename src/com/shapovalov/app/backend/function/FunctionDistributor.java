@@ -12,29 +12,23 @@ public class FunctionDistributor {
     public Result distribute(FunctionCall struct) {
         String functionName = struct.getFunctionName();
         ArrayList<String> parameters = struct.getParameters();
-        if(functionName.equals(Functions.functions.get(0).getFunctionName())) {
-            FunctionCompare func = new FunctionCompare();
-            return func.handle(parameters);
+        FunctionRealisation func = null;
+        if(functionName.equals(Functions.FUNCTIONS.get(0).getFunctionName())) {
+            func = new FunctionCompare();
+        } else if(functionName.equals(Functions.FUNCTIONS.get(1).getFunctionName())) {
+            func = new FunctionCreateUnion();
+        }else if(functionName.equals(Functions.FUNCTIONS.get(2).getFunctionName())) {
+            func = new FunctionDeleteUnion();
+        } else if(functionName.equals(Functions.FUNCTIONS.get(3).getFunctionName())) {
+            func = new FunctionDetail();
+        }else if(functionName.equals(Functions.FUNCTIONS.get(4).getFunctionName())) {
+            func = new FunctionShow();
+        } else {
+            Result result = new Result();
+            result.getStrokes().add("Function does not exist.");
+            result.setError(true);
+            return result;
         }
-        if(functionName.equals(Functions.functions.get(1).getFunctionName())) {
-            FunctionCreateUnion func = new FunctionCreateUnion();
-            return func.handle(parameters);
-        }
-        if(functionName.equals(Functions.functions.get(2).getFunctionName())) {
-            FunctionDeleteUnion func = new FunctionDeleteUnion();
-            return func.handle(parameters);
-        }
-        if(functionName.equals(Functions.functions.get(3).getFunctionName())) {
-            FunctionDetail func = new FunctionDetail();
-            return func.handle(parameters);
-        }
-        if(functionName.equals(Functions.functions.get(4).getFunctionName())) {
-            FunctionShow func = new FunctionShow();
-            return func.handle();
-        }
-        Result result = new Result();
-        result.getStrokes().add("Function does not exist.");
-        result.setError(true);
-        return result;
+        return func.handle(parameters);
     }
 }
