@@ -5,7 +5,7 @@ import com.shapovalov.app.data.handler.FunctionsInitializer;
 import com.shapovalov.utilities.JSONReader;
 import org.json.simple.JSONObject;
 
-public class InitializeLayer {
+public class InitializeLayer implements AppComponent {
 
     public void run() {
         JSONReader reader = new JSONReader();
