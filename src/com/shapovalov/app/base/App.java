@@ -8,11 +8,15 @@ import com.shapovalov.app.base.layers.StartLayer;
 public class App {
 
     public void run() {
-        AppComponent initializeLayer = new InitializeLayer();
+
+        AppComponent initializeLayer, startLayer, processLayer;
+
+        initializeLayer = new InitializeLayer();
+        startLayer = new StartLayer();
+        processLayer = new ProcessLayer();
+
         initializeLayer.run();
-        AppComponent startLayer = new StartLayer();
         startLayer.run();
-        AppComponent processLayer = new ProcessLayer();
         processLayer.run();
-        }
+    }
 }
