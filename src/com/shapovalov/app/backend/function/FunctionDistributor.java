@@ -13,7 +13,9 @@ public class FunctionDistributor {
         String name = struct.getFunctionName();
         ArrayList<String> parameters = struct.getParameters();
         FunctionRealisation realisation;
-        if (name.equals(Functions.FUNCTIONS.get(0).getFunctionName())) {
+        if (name.equals("HELP")) {
+            realisation = new FunctionHelp();
+        } else if (name.equals(Functions.FUNCTIONS.get(0).getFunctionName())) {
             realisation = new FunctionCompare();
         }else if (name.equals(Functions.FUNCTIONS.get(1).getFunctionName())) {
             realisation = new FunctionCreateUnion();

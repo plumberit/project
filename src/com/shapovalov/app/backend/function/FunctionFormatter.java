@@ -4,14 +4,6 @@ import com.shapovalov.app.model.functional.entities.FunctionCall;
 
 import java.util.ArrayList;
 
-/*
- * Задача класса заклюачается в следующем
- * превратить "сырой" инпут
- * в чётко структурируемый объект
- * котором можно отдельно обратиться к названию команды или к отдельному параметру
- * в этом классе НЕ стоит задача связать полученный объект с настоящей командой
- * */
-
 public class FunctionFormatter {
 
     FunctionCall format(String inputRaw) {
@@ -26,14 +18,12 @@ public class FunctionFormatter {
 
 
     private boolean hasParameter(String commandInputRaw) {
-        //заменить на более краткий String метод
-        char[] symbolsOfInput = commandInputRaw.toCharArray();
-        for (int i = 0; i < symbolsOfInput.length; i++) {
-            if (symbolsOfInput[i] == '[') {
-                return true;
-            }
+        if(commandInputRaw.contains(":")) {
+            return true;
+        } else {
+            return false;
+
         }
-        return false;
     }
 
     private FunctionCall rawToStructured
@@ -47,6 +37,7 @@ public class FunctionFormatter {
 
     private FunctionCall noParameterHandle(String inputRaw) {
         String functionName = deleteAroundSpaces(inputRaw);
+        functionName = functionName.toUpperCase();
 
         FunctionCall struct = new FunctionCall();
         struct.setFunctionName(functionName);
@@ -56,12 +47,12 @@ public class FunctionFormatter {
 
     private FunctionCall yesParameterHandle(String inputRaw) {
         //разбиение введенной команды на символы и помещение их в массив
-        int indexSeparator = inputRaw.indexOf('[');
+        int indexSeparator = inputRaw.indexOf(':');
 
         String functionName = inputRaw.substring(0, indexSeparator);
         functionName = deleteAroundSpaces(functionName);
-        String parameters = inputRaw.substring(indexSeparator);
-
+        functionName = functionName.toUpperCase();
+        String parameters = inputRaw.substring(indexSeparator+1);
         ArrayList <String> parametersList = parametersHandle(parameters);
 
         FunctionCall struct = new FunctionCall();
@@ -95,15 +86,16 @@ public class FunctionFormatter {
 
     private ArrayList<String> parametersHandle(String parameters) {
         ArrayList<String> params = new ArrayList<>();
-        while (parameters.contains("[")||parameters.contains("]")) {
-            int firstCrap = parameters.indexOf('[');
-            int secondCrap = parameters.indexOf(']');
-            params.add(parameters.substring(firstCrap+1, secondCrap));
-            parameters = parameters.substring(secondCrap+1);
+        while (parameters.contains(",")) {
+            int index = parameters.indexOf(',');
+            params.add(parameters.substring(0, index));
+            parameters = parameters.substring(index+1);
         }
+        //добавить последний параметр
+        params.add(parameters);
         ArrayList<String> paramsNew = new ArrayList<>();
         for (int i = 0; i <params.size(); i++) {
-            paramsNew.add(deleteAroundSpaces(params.get(i)));
+            paramsNew.add(deleteAroundSpaces(params.get(i).toUpperCase()));
         }
         return paramsNew;
     }

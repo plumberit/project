@@ -15,7 +15,7 @@ public class CountriesInitializer {
             JSONObject object = (JSONObject) country;
             Countries.countries.add(new Country(
                     ((Long) object.get("id")).intValue(),
-                    (String) object.get("name"),
+                    ((String) object.get("name")).toUpperCase(),
                     (long) object.get("population"),
                     ((Long) object.get("square")).intValue(),
                     (long) object.get("GDP")
