@@ -7,12 +7,7 @@ import com.shapovalov.app.model.Result;
 
 import java.util.ArrayList;
 
-public class FunctionDetail implements FunctionLogic {
-    @Override
-    public Result handle() {
-        return null;
-    }
-
+public class FunctionDetail implements FunctionRealisation {
     @Override
     public Result handle(ArrayList<String> parameters) {
         String countryName = parameters.get(0);

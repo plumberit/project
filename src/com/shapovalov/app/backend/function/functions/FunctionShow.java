@@ -6,18 +6,14 @@ import com.shapovalov.app.model.Result;
 
 import java.util.ArrayList;
 
-public class FunctionShow implements FunctionLogic {
+public class FunctionShow implements FunctionRealisation {
+
     @Override
-    public Result handle() {
+    public Result handle(ArrayList<String> parameters) {
         Result result = new Result();
         for (Country country : Countries.countries) {
             result.getStrokes().add(country.getName());
         }
         return result;
-    }
-
-    @Override
-    public Result handle(ArrayList<String> parameters) {
-        return null;
     }
 }

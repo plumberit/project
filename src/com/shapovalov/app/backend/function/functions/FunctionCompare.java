@@ -7,13 +7,7 @@ import com.shapovalov.app.model.Result;
 
 import java.util.ArrayList;
 
-public class FunctionCompare implements FunctionLogic {
-
-
-    @Override
-    public Result handle() {
-        return null;
-    }
+public class FunctionCompare implements FunctionRealisation {
 
     @Override
     public Result handle(ArrayList<String> parameters) {

@@ -8,6 +8,6 @@ public class CollectionInitializer {
         CountriesInitializer initC = new CountriesInitializer();
         initC.initialize(obj);
         FunctionsInitializer initF = new FunctionsInitializer();
-        initF.initialize(obj);
+        initF.initialize();
     }
 }

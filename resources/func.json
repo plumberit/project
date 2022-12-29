@@ -1,0 +1,51 @@
+{
+  "function packs": {
+    "functions v1": [
+      {
+        "name": "COMPARE",
+        "description": "команда для сравнения стран и союзов",
+        "examples": [
+          "COMPARE [country_1] [country_2]",
+          "COMPARE [Switzerland] [Turkey]",
+          "COMPARE [country_1] [unit_1]",
+          "COMPARE [Great Britain] [Unit of Gas]",
+          "COMPARE [unit_1] [unit_2]",
+          "COMPARE [Unit of Gas] [Ocean Unit]"
+        ]
+      },
+      {
+        "name": "CREATE UNION",
+        "description": "команда для создания союза",
+        "examples": [
+          "CREATE UNION [union_name] [Country 1] [Country 2] [Country 3]",
+          "CREATE UNION [Ocean Unit] [Singapore] [Malaysia] [Indonesia]"
+        ]
+      },
+      {
+        "name": "DELETE UNION",
+        "description": "команда для удаления союза",
+        "examples": [
+          "DELETE UNION [union_name]",
+          "DELETE UNION [Unit of Gas]"
+        ]
+      },
+      {
+        "name": "DETAIL",
+        "description": "команда для отображения детальной информации о стране или союзе",
+        "examples": [
+          "DETAIL [country_name]",
+          "DETAIL [Italy]",
+          "DETAIL [unit_name]",
+          "DETAIL [Unit of Gas]"
+        ]
+      },
+      {
+        "name": "SHOW",
+        "description": "команда для отображения всех стран и созданных союзов",
+        "examples": [
+          "SHOW"
+        ]
+      }
+    ]
+  }
+}

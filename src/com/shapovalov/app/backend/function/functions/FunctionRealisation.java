@@ -4,8 +4,7 @@ import com.shapovalov.app.model.Result;
 
 import java.util.ArrayList;
 
-public interface FunctionLogic {
-    public Result handle();
+public interface FunctionRealisation {
     public Result handle(ArrayList<String> parameters);
 
 }

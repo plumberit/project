@@ -1,16 +1,17 @@
 package com.shapovalov.app.model.functional.entities;
 
+import com.shapovalov.app.backend.function.functions.FunctionRealisation;
+
 import java.util.ArrayList;
 
 public class Function {
-    private String functionName;
-    private String description;
-    private ArrayList<String> examples;
+    private final String functionName;
+    private final String description;
+    private final ArrayList<String> examples = new ArrayList<>();
 
-    public Function(String functionName, String description, ArrayList<String> examples) {
+    public Function(String functionName, String description) {
         this.functionName = functionName;
         this.description = description;
-        this.examples = examples;
     }
 
     public String getFunctionName() {
@@ -24,4 +25,5 @@ public class Function {
     public ArrayList<String> getExamples() {
         return examples;
     }
+
 }

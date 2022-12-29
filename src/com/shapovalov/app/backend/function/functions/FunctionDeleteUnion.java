@@ -4,12 +4,7 @@ import com.shapovalov.app.model.Result;
 
 import java.util.ArrayList;
 
-public class FunctionDeleteUnion implements FunctionLogic {
-    @Override
-    public Result handle() {
-        return null;
-    }
-
+public class FunctionDeleteUnion implements FunctionRealisation {
     @Override
     public Result handle(ArrayList<String> parameters) {
         return null;

@@ -6,5 +6,5 @@ import java.util.ArrayList;
 
 public final class Functions {
 
-    public final static ArrayList<Function> functions = new ArrayList<>();
+    public static ArrayList<Function> FUNCTIONS = new ArrayList<>();
 }
