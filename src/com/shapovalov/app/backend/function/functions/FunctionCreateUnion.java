@@ -7,6 +7,9 @@ import java.util.ArrayList;
 public class FunctionCreateUnion implements FunctionRealisation {
     @Override
     public Result handle(ArrayList<String> parameters) {
-        return null;
+        Result result = new Result();
+        result.setError(true);
+        result.getStrokes().add("Function is temporary not realized");
+        return result;
     }
 }
