@@ -6,8 +6,8 @@ public class ProcessLayer implements AppComponent {
 
     public void run() {
         while (true) {
-            ProcessSubLayer appCycleProcess = new ProcessSubLayer();
-            appCycleProcess.run();
+            AppComponent appProcess = new ProcessSubLayer();
+            appProcess.run();
         }
     }
 }

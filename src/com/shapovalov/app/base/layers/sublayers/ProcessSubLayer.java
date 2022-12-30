@@ -1,15 +1,23 @@
 package com.shapovalov.app.base.layers.sublayers;
 
 import com.shapovalov.app.backend.function.FunctionCenter;
+import com.shapovalov.app.base.layers.AppComponent;
 import com.shapovalov.app.model.Result;
+import com.shapovalov.app.view.Display;
 import com.shapovalov.app.view.View;
 
-public class ProcessSubLayer {
+public class ProcessSubLayer implements AppComponent {
     public void run() {
-        View view = new View();
-        String input = view.getInput();
+        Display display = new Display();
+        String input = display.input();
         FunctionCenter functionCenter = new FunctionCenter();
         Result result = functionCenter.handle(input);
-        view.showResult(result.getStrokes());
+        View view = new View();
+        if(result.isError()) {
+            view.setError(result.getStrokes());
+        } else {
+            view.setResult(result.getStrokes());
+        }
+        display.output(view.getStrokes());
     }
 }
