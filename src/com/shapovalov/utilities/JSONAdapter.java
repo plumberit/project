@@ -6,14 +6,18 @@ import org.json.simple.parser.JSONParser;
 import java.io.*;
 import java.util.Scanner;
 
-public class JSONReader {
+public class JSONAdapter {
 
-    public JSONObject read(String filePath) {
+    //единственный публичный метод класса
+    //принимает путь к file.json
+    //возвращает JSON объект с которым можно взаимодействовать
+    public JSONObject get(String filePath) {
         String JSONFileText = JSONFileReader(filePath);
         JSONObject object = JSONObjectCreator(JSONFileText);
         return object;
     }
 
+    //читает file.json
     private static String JSONFileReader(String filePath) {
         StringBuilder str = new StringBuilder();
         try {
@@ -29,6 +33,7 @@ public class JSONReader {
         return str.toString();
     }
 
+    //формирует из текста JSON объект
     private static JSONObject JSONObjectCreator(String str) {
         JSONParser parser = new JSONParser();
         JSONObject obj = null;
