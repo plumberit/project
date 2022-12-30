@@ -9,12 +9,15 @@ public class App {
 
     public void run() {
 
+        //объявление компонентов программы
         AppComponent initializeLayer, startLayer, processLayer;
 
+        //инициализация компонентов
         initializeLayer = new InitializeLayer();
         startLayer = new StartLayer();
         processLayer = new ProcessLayer();
 
+        //последовательное исполнение компонентов
         initializeLayer.run();
         startLayer.run();
         processLayer.run();

@@ -1,10 +1,10 @@
-package com.shapovalov.app.base.layers.logic;
+package com.shapovalov.app.base.layers.sublayers;
 
 import com.shapovalov.app.backend.function.FunctionCenter;
 import com.shapovalov.app.model.Result;
 import com.shapovalov.app.view.View;
 
-public class AppCycleProcess {
+public class ProcessSubLayer {
     public void run() {
         View view = new View();
         String input = view.getInput();

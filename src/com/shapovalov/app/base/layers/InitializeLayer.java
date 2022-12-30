@@ -1,14 +1,14 @@
 package com.shapovalov.app.base.layers;
 
 import com.shapovalov.app.data.handler.*;
-import com.shapovalov.utilities.JSONReader;
+import com.shapovalov.utilities.JSONAdapter;
 import org.json.simple.JSONObject;
 
 public class InitializeLayer implements AppComponent {
 
     public void run() {
-        JSONReader reader = new JSONReader();
-        JSONObject obj = reader.read("resources/data.json");
+        JSONAdapter reader = new JSONAdapter();
+        JSONObject obj = reader.get("resources/data.json");
 
         CountriesInitializer initC = new CountriesInitializer();
         initC.initialize(obj);
