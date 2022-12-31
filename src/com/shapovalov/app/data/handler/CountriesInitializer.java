@@ -8,10 +8,10 @@ import org.json.simple.JSONObject;
 public class CountriesInitializer {
 
     public void initialize(JSONObject obj) {
-        JSONObject countryPacks = (JSONObject) obj.get("country packs");
-        JSONArray countries = (JSONArray) countryPacks.get("countries v1");
+        JSONObject countryPacksJSON = (JSONObject) obj.get("country packs");
+        JSONArray countriesJSON = (JSONArray) countryPacksJSON.get("countries v1");
 
-        for (Object country : countries) {
+        for (Object country : countriesJSON) {
             JSONObject object = (JSONObject) country;
             Countries.countries.add(new Country(
                     ((Long) object.get("id")).intValue(),
@@ -21,6 +21,7 @@ public class CountriesInitializer {
                     (long) object.get("GDP")
             ));
         }
+        Countries.toReadMode();
     }
 
 }
