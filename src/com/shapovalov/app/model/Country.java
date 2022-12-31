@@ -35,20 +35,4 @@ public final class Country {
     public long getGDP() {
         return GDP;
     }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-    public void setName(String name) {
-        this.name = name;
-    }
-    public void setPopulation(long population) {
-        this.population = population;
-    }
-    public void setSquare(int square) {
-        this.square = square;
-    }
-    public void setGDP(long GDP) {
-        this.GDP = GDP;
-    }
 }

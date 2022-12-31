@@ -1,7 +1,5 @@
 package com.shapovalov.app.model.functional.entities;
 
-import com.shapovalov.app.backend.function.functions.FunctionRealisation;
-
 import java.util.ArrayList;
 
 public class Function {
