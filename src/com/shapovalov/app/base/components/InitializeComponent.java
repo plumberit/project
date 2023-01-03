@@ -1,10 +1,10 @@
-package com.shapovalov.app.base.layers;
+package com.shapovalov.app.base.components;
 
 import com.shapovalov.app.data.handler.*;
 import com.shapovalov.utilities.JSONObjectCreator;
 import org.json.simple.JSONObject;
 
-public class InitializeLayer implements AppComponent {
+public class InitializeComponent implements AppComponent {
 
     public void run() {
         FunctionsInitializer.initialize();

@@ -1,25 +1,25 @@
 package com.shapovalov.app.base;
 
-import com.shapovalov.app.base.layers.AppComponent;
-import com.shapovalov.app.base.layers.InitializeLayer;
-import com.shapovalov.app.base.layers.ProcessLayer;
-import com.shapovalov.app.base.layers.StartLayer;
+import com.shapovalov.app.base.components.AppComponent;
+import com.shapovalov.app.base.components.InitializeComponent;
+import com.shapovalov.app.base.components.ProcessComponent;
+import com.shapovalov.app.base.components.StartComponent;
 
 public class App {
 
     public void run() {
 
         //объявление компонентов программы
-        AppComponent initializeLayer, startLayer, processLayer;
+        AppComponent initializeComponent, startComponent, processComponent;
 
         //инициализация компонентов
-        initializeLayer = new InitializeLayer();
-        startLayer = new StartLayer();
-        processLayer = new ProcessLayer();
+        initializeComponent = new InitializeComponent();
+        startComponent = new StartComponent();
+        processComponent = new ProcessComponent();
 
         //последовательное исполнение компонентов
-        initializeLayer.run();
-        startLayer.run();
-        processLayer.run();
+        initializeComponent.run();
+        startComponent.run();
+        processComponent.run();
     }
 }
