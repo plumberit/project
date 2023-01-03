@@ -6,12 +6,12 @@ import org.json.simple.parser.JSONParser;
 import java.io.*;
 import java.util.Scanner;
 
-public class JSONAdapter {
+public class JSONObjectCreator {
 
     //единственный публичный метод класса
     //принимает путь к file.json
     //возвращает JSON объект с которым можно взаимодействовать
-    public JSONObject get(String filePath) {
+    public static JSONObject create(String filePath) {
         String JSONFileText = JSONFileReader(filePath);
         JSONObject object = JSONObjectCreator(JSONFileText);
         return object;
