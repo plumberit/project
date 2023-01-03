@@ -1,9 +1,6 @@
 package com.shapovalov.app.base;
 
-import com.shapovalov.app.base.components.AppComponent;
-import com.shapovalov.app.base.components.InitializeComponent;
-import com.shapovalov.app.base.components.ProcessComponent;
-import com.shapovalov.app.base.components.StartComponent;
+import com.shapovalov.app.base.components.*;
 
 public class App {
 
