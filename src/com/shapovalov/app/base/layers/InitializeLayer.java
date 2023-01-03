@@ -7,8 +7,9 @@ import org.json.simple.JSONObject;
 public class InitializeLayer implements AppComponent {
 
     public void run() {
+        FunctionsInitializer.initialize();
+
         JSONObject obj = JSONObjectCreator.create("resources/data.json");
         CountriesInitializer.initialize(obj);
-        FunctionsInitializer.initialize();
     }
 }
