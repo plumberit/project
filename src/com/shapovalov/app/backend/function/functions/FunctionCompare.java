@@ -9,8 +9,13 @@ import java.util.ArrayList;
 
 public class FunctionCompare implements FunctionRealisation {
 
+    int a = 0;
+
     @Override
     public Result handle(ArrayList<String> parameters) {
+        System.out.println(a);
+        a = 2;
+
         String country1name = parameters.get(0);
         String country2name = parameters.get(1);
         Country country1 = null;

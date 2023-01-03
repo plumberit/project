@@ -1,11 +1,14 @@
 package com.shapovalov.app.model.functional.entities;
 
+import com.shapovalov.app.backend.function.functions.FunctionRealisation;
+
 import java.util.ArrayList;
 
 public class Function {
     private final String functionName;
     private final String description;
     private final ArrayList<String> examples = new ArrayList<>();
+    private FunctionRealisation realisation;
 
     public Function(String functionName, String description) {
         this.functionName = functionName;
@@ -22,6 +25,14 @@ public class Function {
 
     public ArrayList<String> getExamples() {
         return examples;
+    }
+
+    public void realize(FunctionRealisation realisation) {
+        this.realisation = realisation;
+    }
+
+    public Object execute(ArrayList<String> parameters) {
+        return realisation.handle(parameters);
     }
 
 }

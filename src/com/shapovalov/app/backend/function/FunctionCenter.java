@@ -9,7 +9,6 @@ public class FunctionCenter {
         FunctionFormatter functionFormatter = new FunctionFormatter();
         FunctionCall struct = functionFormatter.format(inputRaw);
         FunctionDistributor distributor = new FunctionDistributor();
-        Result result = distributor.distribute(struct);
-        return result;
+        return distributor.distribute(struct);
     }
 }
