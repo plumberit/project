@@ -4,7 +4,7 @@ import com.shapovalov.app.data.Functions;
 import com.shapovalov.app.model.functional.entities.Function;
 
 public class FunctionsInitializer {
-    public void initialize() {
+    public static void initialize() {
         Functions.FUNCTIONS.add(new Function( "COMPARE",
                 "команда для сравнения стран и союзов"));
         Functions.FUNCTIONS.get(0).getExamples().add("COMPARE : Country 1, Country 2");

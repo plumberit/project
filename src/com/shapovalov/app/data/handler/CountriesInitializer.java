@@ -7,7 +7,7 @@ import org.json.simple.JSONObject;
 
 public class CountriesInitializer {
 
-    public void initialize(JSONObject obj) {
+    public static void initialize(JSONObject obj) {
         JSONObject countryPacksJSON = (JSONObject) obj.get("country packs");
         JSONArray countriesJSON = (JSONArray) countryPacksJSON.get("countries v1");
 

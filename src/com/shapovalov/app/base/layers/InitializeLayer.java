@@ -8,11 +8,7 @@ public class InitializeLayer implements AppComponent {
 
     public void run() {
         JSONObject obj = JSONObjectCreator.create("resources/data.json");
-
-        CountriesInitializer initC = new CountriesInitializer();
-        initC.initialize(obj);
-        FunctionsInitializer initF = new FunctionsInitializer();
-        initF.initialize();
-
+        CountriesInitializer.initialize(obj);
+        FunctionsInitializer.initialize();
     }
 }
