@@ -1,10 +1,11 @@
 package com.shapovalov.app.base.components;
 
+import com.shapovalov.app.base.App;
 import com.shapovalov.app.data.handler.*;
 import com.shapovalov.utilities.JSONObjectCreator;
 import org.json.simple.JSONObject;
 
-public class InitializeComponent implements AppComponent {
+public class InitializeComponent implements App.Component {
 
     public void run() {
         FunctionsInitializer.initialize();

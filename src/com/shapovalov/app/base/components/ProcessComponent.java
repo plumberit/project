@@ -1,11 +1,12 @@
 package com.shapovalov.app.base.components;
 
 import com.shapovalov.app.backend.function.FunctionCenter;
+import com.shapovalov.app.base.App;
 import com.shapovalov.app.model.Result;
 import com.shapovalov.app.view.Display;
 import com.shapovalov.app.view.View;
 
-public class ProcessComponent implements AppComponent {
+public class ProcessComponent implements App.Component {
 
     public void run() {
         while (true) {

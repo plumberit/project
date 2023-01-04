@@ -18,11 +18,10 @@ public class FunctionFormatter {
 
 
     private boolean hasParameter(String commandInputRaw) {
-        if(commandInputRaw.contains(":")) {
+        if (commandInputRaw.contains(":")) {
             return true;
         } else {
             return false;
-
         }
     }
 
@@ -52,8 +51,8 @@ public class FunctionFormatter {
         String functionName = inputRaw.substring(0, indexSeparator);
         functionName = deleteAroundSpaces(functionName);
         functionName = functionName.toUpperCase();
-        String parameters = inputRaw.substring(indexSeparator+1);
-        ArrayList <String> parametersList = parametersHandle(parameters);
+        String parameters = inputRaw.substring(indexSeparator + 1);
+        ArrayList<String> parametersList = parametersHandle(parameters);
 
         FunctionCall struct = new FunctionCall();
         struct.setFunctionName(functionName);
@@ -63,13 +62,12 @@ public class FunctionFormatter {
 
 
     private String deleteAroundSpaces(String stroke) {
-
         //удаление пробелов в первом и последнем символе
-        if(stroke.charAt(0)==' ') {
+        if (stroke.charAt(0) == ' ') {
             stroke = stroke.substring(1);
         }
-        if(stroke.charAt(stroke.length()-1)==' ') {
-            stroke = stroke.substring(0, stroke.length()-1);
+        if (stroke.charAt(stroke.length() - 1) == ' ') {
+            stroke = stroke.substring(0, stroke.length() - 1);
         }
         return stroke;
     }
@@ -89,15 +87,14 @@ public class FunctionFormatter {
         while (parameters.contains(",")) {
             int index = parameters.indexOf(',');
             params.add(parameters.substring(0, index));
-            parameters = parameters.substring(index+1);
+            parameters = parameters.substring(index + 1);
         }
         //добавить последний параметр
         params.add(parameters);
         ArrayList<String> paramsNew = new ArrayList<>();
-        for (int i = 0; i <params.size(); i++) {
+        for (int i = 0; i < params.size(); i++) {
             paramsNew.add(deleteAroundSpaces(params.get(i).toUpperCase()));
         }
         return paramsNew;
     }
-
 }

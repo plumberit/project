@@ -10,7 +10,11 @@ public class App {
         runComponent(new ProcessComponent());
     }
 
-    private void runComponent(AppComponent component) {
+    private void runComponent(Component component) {
         component.run();
+    }
+
+    public interface Component {
+        public void run();
     }
 }
