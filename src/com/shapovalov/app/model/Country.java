@@ -35,4 +35,8 @@ public final class Country {
     public long getGDP() {
         return GDP;
     }
+
+    public int getGDPPerPerson() {
+        return (int) Math.floor((float)(GDP / population));
+    }
 }

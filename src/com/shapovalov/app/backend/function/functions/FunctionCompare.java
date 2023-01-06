@@ -9,12 +9,8 @@ import java.util.ArrayList;
 
 public class FunctionCompare implements FunctionRealisation {
 
-    int a = 0;
-
     @Override
     public Result handle(ArrayList<String> parameters) {
-        System.out.println(a);
-        a = 2;
 
         String country1name = parameters.get(0);
         String country2name = parameters.get(1);
@@ -73,6 +69,10 @@ public class FunctionCompare implements FunctionRealisation {
                 (float) country1.getGDP() / country2.getGDP();
         CompareStatus GDPStatus = exp(GDPDivision);
 
+        float GDPPerPersonDivision =
+                (float) country1.getGDPPerPerson() / country2.getGDPPerPerson();
+        CompareStatus GDPPerPersonStatus = exp(GDPPerPersonDivision);
+
 
         ArrayList<String> strokes = new ArrayList<>();
         strokes.add(country1.getName() + " to " + country2.getName());
@@ -83,6 +83,8 @@ public class FunctionCompare implements FunctionRealisation {
                 + " in " + squareStatus.difference);
         strokes.add("GDP " + GDPStatus.relation
                 + " in " + GDPStatus.difference);
+        strokes.add("GDP per person " + GDPPerPersonStatus.relation
+                + " in " + GDPPerPersonStatus.difference);
 
         return strokes;
     }

@@ -20,6 +20,9 @@ public class CountryDemonstrate {
         list.add(
                 "GDP: " + obj.toReadableNum(String.valueOf(country.getGDP())) + "$"
         );
+        list.add(
+                "GDP per person: " + obj.toReadableNum(String.valueOf(country.getGDPPerPerson())) + "$"
+        );
         return list;
     }
 }
