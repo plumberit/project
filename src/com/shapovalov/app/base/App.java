@@ -15,6 +15,6 @@ public class App {
     }
 
     public interface Component {
-        public void run();
+        void run();
     }
 }
