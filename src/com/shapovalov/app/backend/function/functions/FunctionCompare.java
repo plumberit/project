@@ -73,6 +73,10 @@ public class FunctionCompare implements FunctionRealisation {
                 (float) country1.getGDPPerPerson() / country2.getGDPPerPerson();
         CompareStatus GDPPerPersonStatus = exp(GDPPerPersonDivision);
 
+        float populationDensityDivision =
+                (float) country1.getPopulationDensity() / country2.getPopulationDensity();
+        CompareStatus populationDensityStatus = exp(populationDensityDivision);
+
 
         ArrayList<String> strokes = new ArrayList<>();
         strokes.add(country1.getName() + " to " + country2.getName());
@@ -85,6 +89,8 @@ public class FunctionCompare implements FunctionRealisation {
                 + " in " + GDPStatus.difference);
         strokes.add("GDP per person " + GDPPerPersonStatus.relation
                 + " in " + GDPPerPersonStatus.difference);
+        strokes.add("Population density " + populationDensityStatus.relation
+                + " in " + populationDensityStatus.difference);
 
         return strokes;
     }

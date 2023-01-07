@@ -23,6 +23,9 @@ public class CountryDemonstrate {
         list.add(
                 "GDP per person: " + obj.toReadableNum(String.valueOf(country.getGDPPerPerson())) + "$"
         );
+        list.add(
+                "Population density: " + obj.toReadableNum(String.valueOf(country.getPopulationDensity())) + " people per km^2"
+        );
         return list;
     }
 }

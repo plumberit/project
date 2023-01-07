@@ -37,6 +37,10 @@ public final class Country {
     }
 
     public int getGDPPerPerson() {
-        return (int) Math.floor((float)(GDP / population));
+        return Math.round((float)(GDP / population));
+    }
+
+    public int getPopulationDensity() {
+        return Math.round((float)(population / square));
     }
 }
